@@ -246,7 +246,7 @@ $$
 + \frac{9}{8\pi^2} \tilde\lambda^2
 && \text{(4-vertex bubble)} \\[4pt]
 \beta_\gamma \;=\; \partial_t \tilde\gamma
-&= 0 \tilde\gamma
+&= 0 \cdot \tilde\gamma
 + \frac{3}{4\pi^2} \tilde\lambda \tilde\gamma
 && \text{(kernel stretching)} \\[4pt]
 \beta_\mu   \;=\; \partial_t \tilde\mu
