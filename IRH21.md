@@ -130,9 +130,7 @@ This axiom clarifies that IRH's contribution is not to derive *quantumness itsel
 ### 1.1 The Fundamental Field and the Informational Group Manifold
 
 Let
-$$
-G_{\text{inf}} = \mathrm{SU}(2) \times \mathrm{U}(1)_{\phi}
-$$
+$$G_{\text{inf}} = \mathrm{SU}(2) \times \mathrm{U}(1)_{\phi}$$
 be the compact Lie group of **primordial informational degrees of freedom**. This specific choice is not arbitrary or anthropically selected; it is uniquely derived from the **Quantum Algorithmic Generative Capacity Functional** (Section 1.5).
 
 *   $\mathrm{SU}(2)$ encodes the minimal non-commutative algebra of Elementary Algorithmic Transformations (EATs), rigorously selected for optimal algorithmic efficiency and generative capacity.
@@ -140,9 +138,7 @@ be the compact Lie group of **primordial informational degrees of freedom**. Thi
 
 The fundamental field is now explicitly formulated using **quaternionic field variables**, reflecting the underlying algebraic structure of $G_{\text{inf}}$ and providing a deeper explanation for the emergence of 4D spacetime (Section 2.1.1). The field is a function of **four** group elements (four strands of a 4-valent vertex):
 
-$$
-\phi(g_1,g_2,g_3,g_4) \in \mathbb{H}, \qquad g_i \in G_{\text{inf}}
-$$
+$$\phi(g_1,g_2,g_3,g_4) \in \mathbb{H}, \qquad g_i \in G_{\text{inf}}$$
 
 where $\mathbb{H}$ denotes the quaternions. This quaternionic formulation is crucial for the enhanced cancellation mechanisms in the RG flow.
 
@@ -150,37 +146,27 @@ where $\mathbb{H}$ denotes the quaternions. This quaternionic formulation is cru
 
 The action is local, gauge-invariant under simultaneous left-multiplication on all four arguments, and exactly reproduces the discrete Harmony Functional in the infrared. The use of quaternionic fields naturally incorporates the non-commutative structure of $\mathrm{SU}(2)$.
 
-$$
-S[\phi,\bar{\phi}] = S_{\text{kin}} + S_{\text{int}} + S_{\text{hol}}
-$$
+$$S[\phi,\bar{\phi}] = S_{\text{kin}} + S_{\text{int}} + S_{\text{hol}}$$
 
 **Kinetic term** — complex group Laplacian (exact discrete analogue of $\mathrm{Tr}\,\mathcal{L}^2$):
 
-$$
-S_{\text{kin}} = \int \Bigl[\prod_{i=1}^4 dg_i\Bigr]\; \bar{\phi}(g_1,g_2,g_3,g_4)\; \Bigl(\sum_{a=1}^{3}\sum_{i=1}^{4} \Delta_a^{(i)}\Bigr)\, \phi(g_1,g_2,g_3,g_4) \tag{1.1}
-$$
+$$S_{\text{kin}} = \int \Bigl[\prod_{i=1}^4 dg_i\Bigr]\; \bar{\phi}(g_1,g_2,g_3,g_4)\; \Bigl(\sum_{a=1}^{3}\sum_{i=1}^{4} \Delta_a^{(i)}\Bigr)\, \phi(g_1,g_2,g_3,g_4) \tag{1.1}$$
 
 where $\Delta_a^{(i)}$ is the Laplace–Beltrami operator acting on the $\mathrm{SU}(2)$ factor of the $i$-th argument with generator $T_a$. The precise **Weyl ordering** for this non-commutative manifold is detailed and justified in **Appendix G**, rigorously eliminating any operator ambiguity. The quaternionic nature of $\phi$ is handled by extending the Laplace-Beltrami operator to act on $\mathbb{H}$-valued functions.
 
 **Interaction term** — phase-coherent, QNCD-weighted 4-vertex:
 
-$$
-S_{\text{int}} = \lambda \int \Bigl[\prod_{i=1}^4 dg_i\,dh_i\Bigr]\; K(g_1 h_1^{-1},g_2 h_2^{-1},g_3 h_3^{-1},g_4 h_4^{-1})\; \bar{\phi}(g_1,g_2,g_3,g_4)\, \phi(h_1,h_2,h_3,h_4) \tag{1.2}
-$$
+$$S_{\text{int}} = \lambda \int \Bigl[\prod_{i=1}^4 dg_i\,dh_i\Bigr]\; K(g_1 h_1^{-1},g_2 h_2^{-1},g_3 h_3^{-1},g_4 h_4^{-1})\; \bar{\phi}(g_1,g_2,g_3,g_4)\, \phi(h_1,h_2,h_3,h_4) \tag{1.2}$$
 
 with the **quaternionic kernel**:
 
-$$
-K(g_1,g_2,g_3,g_4) = e^{i(\phi_1 + \phi_2 + \phi_3 - \phi_4)}\; \exp\!\Bigl[-\gamma\!\sum_{1\le i<j\le 4} d_{\text{QNCD}}(g_i g_j^{-1})\Bigr] \tag{1.3}
-$$
+$$K(g_1,g_2,g_3,g_4) = e^{i(\phi_1 + \phi_2 + \phi_3 - \phi_4)}\; \exp\!\Bigl[-\gamma\!\sum_{1\le i<j\le 4} d_{\text{QNCD}}(g_i g_j^{-1})\Bigr] \tag{1.3}$$
 
 where $d_{\text{QNCD}}$ is the bi-invariant distance on $G_{\text{inf}}$ induced by the **Quantum Normalized Compression Distance** on the quantum states associated with group elements (explicitly constructed and proven for **quantum compressor-independence** via the Quantum Universal Compressor Convergence Theorem in **Appendix A.4**). The fundamental nature of QNCD as the unique measure of physical cost is axiomatically established in Section 1.5. The quaternionic multiplication for $\bar{\phi}\phi$ is implicitly assumed.
 
 **Holographic measure term** — combinatorial boundary regulator:
 
-$$
-S_{\text{hol}} = \mu \int \Bigl[\prod_{i=1}^4 dg_i\Bigr]\; |\phi(g_1,g_2,g_3,g_4)|^2 \, \prod_{i=1}^4 \Theta\!\Bigl(\mathrm{Tr}_{\mathrm{SU}(2)}(g_i g_{i+1}^{-1})\Bigr) \tag{1.4}
-$$
+$$S_{\text{hol}} = \mu \int \Bigl[\prod_{i=1}^4 dg_i\Bigr]\; |\phi(g_1,g_2,g_3,g_4)|^2 \, \prod_{i=1}^4 \Theta\!\Bigl(\mathrm{Tr}_{\mathrm{SU}(2)}(g_i g_{i+1}^{-1})\Bigr) \tag{1.4}$$
 
 where $\Theta$ is a smooth step function enforcing the **Combinatorial Holographic Principle** (Axiom 3) at the level of individual 4-simplices.
 
@@ -189,21 +175,15 @@ where $\Theta$ is a smooth step function enforcing the **Combinatorial Holograph
 **Theorem 1.1 (Harmony Functional from cGFT)**
 In the large-volume, infrared limit, the one-particle-irreducible effective action for the bilocal field
 
-$$
-\Sigma(g,g') = \int \phi(g,\cdot,\cdot,\cdot)\,\bar{\phi}(\cdot,\cdot,\cdot,g')\, \prod_{k=2}^3 dg_k
-$$
+$$\Sigma(g,g') = \int \phi(g,\cdot,\cdot,\cdot)\,\bar{\phi}(\cdot,\cdot,\cdot,g')\, \prod_{k=2}^3 dg_k$$
 
 is exactly (up to analytically bounded $O(N^{-1})$ corrections):
 
-$$
-\Gamma[\Sigma] = \mathrm{Tr}\Bigl(\mathcal{L}[\Sigma]^2\Bigr) - C_H \log\det'\mathcal{L}[\Sigma] + O(N^{-1}) \tag{1.5}
-$$
+$$\Gamma[\Sigma] = \mathrm{Tr}\Bigl(\mathcal{L}[\Sigma]^2\Bigr) - C_H \log\det'\mathcal{L}[\Sigma] + O(N^{-1}) \tag{1.5}$$
 
 where $\mathcal{L}[\Sigma]$ is the **emergent complex graph Laplacian** of the condensate geometry, and
 
-$$
-C_H = \frac{\beta_\lambda}{\beta_\gamma}
-$$
+$$C_H = \frac{\beta_\lambda}{\beta_\gamma}$$
 
 is the ratio of the $\beta$-functions of the two relevant couplings at the non-Gaussian fixed point (computed analytically in Section 1.2). The full derivation of this statement, including **analytically verified bounds for $O(N^{-1})$ corrections**, is provided in **Section 1.4** and **Appendix B.4**.
 
@@ -229,9 +209,7 @@ The quaternionic cGFT action of Section 1.1 defines a complete, local, ultraviol
 
 The effective average action $\Gamma_k$ satisfies:
 
-$$
-\partial_t \Gamma_k = \frac{1}{2} \mathrm{Tr} \left[ (\Gamma_k^{(2)} + R_k)^{-1} \partial_t R_k \right], \qquad t = \log(k/\Lambda_{\text{UV}}) \tag{1.12}
-$$
+$$\partial_t \Gamma_k = \frac{1}{2} \mathrm{Tr} \left[ (\Gamma_k^{(2)} + R_k)^{-1} \partial_t R_k \right], \qquad t = \log(k/\Lambda_{\text{UV}}) \tag{1.12}$$
 
 with regulator $R_k(p) = Z_k (k^2 - p^2) \theta(k^2 - p^2)$ adapted to the non-flat geometry of $G_{\text{inf}}$.
 
@@ -249,9 +227,7 @@ $$\beta_\mu = \partial_t \tilde\mu = 2 \tilde\mu + \frac{1}{2\pi^2} \tilde\lambd
 
 Setting $\beta_\lambda = \beta_\gamma = \beta_\mu = 0$ yields the unique positive solution:
 
-$$
-\tilde\lambda_* = \frac{48\pi^2}{9} ,\qquad \tilde\gamma_* = \frac{32\pi^2}{3} ,\qquad \tilde\mu_*   = 16\pi^2 \tag{1.14}
-$$
+$$\tilde\lambda_* = \frac{48\pi^2}{9} ,\qquad \tilde\gamma_* = \frac{32\pi^2}{3} ,\qquad \tilde\mu_*   = 16\pi^2 \tag{1.14}$$
 
 **All higher-order corrections rigorously proven to be negligible** ($<10^{-10}$ shift) by the HarmonyOptimizer's solution of the full Wetterich equation, confirming **exact one-loop dominance** arising from specific algebraic and topological cancellations inherent to this cGFT (detailed and analytically proven through two-loop beta function calculations and Ward-like identities in **Appendix B.3**). The **quaternionic reformulation** (Section 1.1.1) provides a deeper explanation for this dominance, with analytical proofs suggesting exact vanishing of certain higher-loop contributions.
 
@@ -263,9 +239,7 @@ $$C_H = \frac{\beta_\lambda}{\beta_\gamma}\Big|_{*} = \frac{\frac{9}{8\pi^2} \ti
 
 Inserting the exact fixed-point values (1.14):
 
-$$
-\boxed{C_H = 0.045935703598\ldots} \tag{1.16}
-$$
+$$\boxed{C_H = 0.045935703598\ldots} \tag{1.16}$$
 
 This is the **first universal constant of Nature analytically computed** within Intrinsic Resonance Holography. The 12 matching digits with previous numerical extractions are now rigorously confirmed as the inevitable consequence of the RG flow.
 
@@ -276,9 +250,7 @@ The uniqueness and global attractiveness of the Cosmic Fixed Point $(\tilde\lamb
 #### 1.3.1 Computation of the Stability Matrix
 
 The stability of the fixed point is determined by the eigenvalues of the Jacobian matrix (or stability matrix) $M_{ij}$ of the beta functions, evaluated at the fixed point:
-$$
-M_{ij} = \left. \frac{\partial \beta_i}{\partial \tilde{g}_j} \right|_{(\tilde\lambda_*,\tilde\gamma_*,\tilde\mu_*)}
-$$
+$$M_{ij} = \left. \frac{\partial \beta_i}{\partial \tilde{g}_j} \right|_{(\tilde\lambda_*,\tilde\gamma_*,\tilde\mu_*)}$$
 where $\tilde{g}_j = \{\tilde\lambda, \tilde\gamma, \tilde\mu\}$. From the one-loop beta functions (Eq. 1.13) and the fixed-point values (Eq. 1.14), we explicitly compute the entries of this matrix:
 
 $$
@@ -292,9 +264,7 @@ $$
 #### 1.3.2 Eigenvalues and Global Attractiveness ( Detailed Analysis)
 
 The eigenvalues of this lower-triangular matrix are simply its diagonal elements:
-$$
-\lambda_1 = 10, \quad \lambda_2 = 4, \quad \lambda_3 = \frac{14}{3} \approx 4.67
-$$
+$$\lambda_1 = 10, \quad \lambda_2 = 4, \quad \lambda_3 = \frac{14}{3} \approx 4.67$$
 These eigenvalues represent the critical exponents of the RG flow. For IR-attractiveness ($t = \log(k/\Lambda_{\text{UV}})$, so $t \to -\infty$ in the IR), the eigenvalues of $M$ must be positive. As shown, all three eigenvalues $\lambda_1, \lambda_2, \lambda_3$ are positive. This confirms that the Cosmic Fixed Point is indeed **infrared-attractive for all three couplings** ($\tilde\lambda, \tilde\gamma, \tilde\mu$). All three couplings are thus relevant in the IR, ensuring that the theory's dynamics at macroscopic scales are critically sensitive to these fixed-point values.
 
 #### 1.3.3 Higher-Loop and Non-Perturbative Stability ( Rigorous Proof of Global Attractiveness)
@@ -314,9 +284,7 @@ Theorem 1.1 asserts that the Harmony Functional (Eq. 1.5) emerges as the one-par
 #### 1.4.1 Definition of the Bilocal Field and Effective Action
 
 The cGFT fundamental field $\phi(g_1,g_2,g_3,g_4)$ describes interactions between four group elements. In the low-energy, condensed phase, macroscopic observables emerge from collective excitations. The **bilocal field** $\Sigma(g,g')$ represents a fundamental two-point correlation, effectively describing the emergent 'edges' or connections in the Cymatic Resonance Network:
-$$
-\Sigma(g,g') = \int \phi(g,\cdot,\cdot,\cdot)\,\bar{\phi}(\cdot,\cdot,\cdot,g')\, \prod_{k=2}^3 dg_k
-$$
+$$\Sigma(g,g') = \int \phi(g,\cdot,\cdot,\cdot)\,\bar{\phi}(\cdot,\cdot,\cdot,g')\, \prod_{k=2}^3 dg_k$$
 This field corresponds to the propagator of the fundamental field in the condensate phase. The 1PI effective action $\Gamma[\Sigma]$ is then obtained by a Legendre transform of the generating functional for connected Green's functions, with respect to the field $\Sigma$.
 
 #### 1.4.2 Heat-Kernel Expansion and Log-Determinant Contribution ( Detailed Derivation)
@@ -325,9 +293,7 @@ The derivation proceeds by analyzing the leading-order contributions to the effe
 1.  **Kinetic Term - $\mathrm{Tr}(\mathcal{L}[\Sigma]^2)$:** The effective kinetic term for $\Sigma$ arises directly from the original cGFT kinetic term (Eq. 1.1) upon functional integration of the fundamental field $\phi$ in the large-volume limit and for the emergent continuum geometry. The sum of Laplace-Beltrami operators acting on the four arguments of $\phi$ translates into a generalized Laplacian operator $\mathcal{L}[\Sigma]$ acting on the bilocal field $\Sigma$. The term $\mathrm{Tr}(\mathcal{L}[\Sigma]^2)$ arises as the dominant kinetic contribution for the dynamics of the condensate, representing the curvature of the effective geometry. This term is a specific representation of the group Laplacian acting on the bilocal field, and its squared trace represents the energy associated with its excitations.
 2.  **Quantum Fluctuations and $\log\det'$:** The $\log\det'\mathcal{L}[\Sigma]$ term arises from integrating out the quantum fluctuations of the fundamental field $\phi$ around its condensate expectation value. This is a standard result from quantum field theory, where the functional determinant of a kinetic operator, representing Gaussian fluctuations, yields a logarithm. The prime denotes the exclusion of zero modes, which correspond to the vacuum.
     Specifically, the quantum effective action can be formally written as:
-    $$
-    \Gamma[\Sigma] = S[\Sigma] + \frac{1}{2} \mathrm{Tr}\log(\mathcal{K}[\Sigma]) + \text{higher loops}
-    $$
+$$\Gamma[\Sigma] = S[\Sigma] + \frac{1}{2} \mathrm{Tr}\log(\mathcal{K}[\Sigma]) + \text{higher loops}$$
     where $\mathcal{K}[\Sigma]$ is the effective inverse propagator for $\phi$ in the background of $\Sigma$. In the infrared limit and for the specific structure of the cGFT, this trace logarithm simplifies to $C_H \log\det'\mathcal{L}[\Sigma]$, where $\mathcal{L}[\Sigma]$ is the emergent group Laplacian of the condensate geometry. The factor $C_H$ arises from the precise accounting of the functional determinant for the quaternionic field $\phi$ in the presence of the specific kernel and holographic measure, integrating out the dependence on the scale $k$. The integration involves the group Haar measures and group Laplacians.
 3.  **The Universal Exponent $C_H$:** The coefficient $C_H$ arises naturally from the scaling dimensions and combinatorial factors of the cGFT at the non-Gaussian fixed point. As shown in Eq. 1.15, it is precisely the ratio of the beta functions of the relevant couplings, confirming its universal nature. The **$O(N^{-1})$ corrections are analytically verified and bounded** in **Appendix B.4**, demonstrating their negligibility in the thermodynamic limit.
 
@@ -345,9 +311,7 @@ The choice of $G_{\text{inf}} = \text{SU}(2) \times \text{U}(1)$, a 4-valent int
 *   **Compact Lie Group for $G_{\text{inf}}$:** Informational states are discrete and finite, yet capable of emergent continuous symmetries and supporting well-defined functional renormalization group flows. This necessitates a compact Lie group for the substrate, allowing for invariant measures and consistent RG flow.
 *   **Uniqueness of $G_{\text{inf}} = \text{SU}(2) \times \mathrm{U}(1)$ from the Quantum Algorithmic Generative Capacity Functional ( Rigorous Global Uniqueness Proof, Quantified):**
     The choice of $G_{\text{inf}}$ is uniquely determined by minimizing the **Quantum Algorithmic Generative Capacity Functional $\mathcal{G}_Q[G]$**, which quantifies the optimal balance between informational coherence, quantum algorithmic parsimony, and stable generative potential for emergent dynamics across the space of all compact Lie groups. This functional is defined as:
-    $$
-    \mathcal{G}_Q[G] = \text{Tr}(\mathcal{L}_G^{-1}) - \frac{\alpha_Q}{\beta_Q} \log(\text{vol}(G)) + \gamma_Q \sum_{j} |\lambda_j^G|^{-1} + \delta_Q \sum_{k} (\text{rank}(G) - k_G)^2
-    $$
+$$\mathcal{G}_Q[G] = \text{Tr}(\mathcal{L}_G^{-1}) - \frac{\alpha_Q}{\beta_Q} \log(\text{vol}(G)) + \gamma_Q \sum_{j} |\lambda_j^G|^{-1} + \delta_Q \sum_{k} (\text{rank}(G) - k_G)^2$$
     Here, the coefficients $\alpha_Q, \beta_Q, \gamma_Q, \delta_Q$ are **universal constants derived from first principles of quantum algorithmic complexity theory and quantum informational entropy**, analytically quantified in **Appendix A.7.1**. The first term, $\text{Tr}(\mathcal{L}_G^{-1})$, acts as a measure of "informational fluidity" or inverse rigidity, favoring groups that allow for efficient propagation of quantum information. The second term, $-\frac{\alpha_Q}{\beta_Q} \log(\text{vol}(G))$, penalizes excessive "informational volume" while favoring compactness. The third term, $\gamma_Q \sum_{j} |\lambda_j^G|^{-1}$, sums over the inverse of the eigenvalues of the group Laplacian, measuring the overall "informational connectivity" and penalizing groups with large spectral gaps (which would hinder smooth quantum information flow). The fourth term, $\delta_Q \sum_{k} (\text{rank}(G) - k_G)^2$, ensures the emergent structure can support a non-trivial, yet parsimonious, number of distinct emergent degrees of freedom.
 
     Rigorous minimization of $\mathcal{G}_Q[G]$ is analytically proven to yield a unique global minimum at $G = \text{SU}(2) \times \mathrm{U}(1)$ across *all* compact Lie groups. The proof proceeds in several stages, detailed and quantitatively closed in **Appendix A.7**:
@@ -410,9 +374,7 @@ The discrepancy of $42/11 - 4 = -2/11$ is not an error — it is the **graviton 
 
 The full, non-perturbative flow of the spectral dimension is obtained by inserting the running effective kinetic operator $\mathcal{K}_k$ into the heat-kernel definition (2.1). The resulting exact equation, derived from the Wetterich equation, is
 
-$$
-\partial_t d_{\text{spec}}(k) = \eta(k) \Bigl(d_{\text{spec}}(k) - 4\Bigr) + \Delta_{\text{grav}}(k) \tag{2.8}
-$$
+$$\partial_t d_{\text{spec}}(k) = \eta(k) \Bigl(d_{\text{spec}}(k) - 4\Bigr) + \Delta_{\text{grav}}(k) \tag{2.8}$$
 
 where:
 *   $\eta(k) < 0$ is the **anomalous dimension** of the graviton (negative in the UV, driving dimensional reduction),
@@ -427,9 +389,7 @@ The holographic measure term (1.4) generates graviton-like tensor modes in the e
 The $\Delta_{\text{grav}}(k)$ term specifically quantifies the backreaction of the emergent graviton degrees of freedom on the propagation of heat (which defines spectral dimension). In IRH , the precise value of $-2/11$ for the shift in spectral dimension arises from the contribution of the emergent graviton to the effective action. This is computed by analyzing the one-loop diagram for the propagation of a scalar field in the background of the emergent metric, where the metric fluctuations are sourced by the cGFT condensates. The $-2/11$ factor arises from the specific counting of degrees of freedom in the effective 4D emergent spacetime and is a known result in effective quantum gravity models.
 The HarmonyOptimizer, solving the full Wetterich equation with tensor modes included, yields the **exact result**:
 
-$$
-\boxed{d_{\text{spec}}(k \to 0) = 4.0000000000(1)} \tag{2.9}
-$$
+$$\boxed{d_{\text{spec}}(k \to 0) = 4.0000000000(1)} \tag{2.9}$$
 
 with the error bar dominated by certified numerical truncation.
 
@@ -482,18 +442,14 @@ Specifically, the effective metric is extracted from the correlation function of
 
 The emergent spacetime manifold $M^4$ is a quotient space of the group manifold $G_{\text{inf}}$, where the coordinates $x^\mu$ arise from a choice of basis functions on the group elements. The graviton is precisely identified with the symmetric tensor fluctuations of this condensate. The metric tensor is then constructed as:
 
-$$
-g_{\mu\nu}(x) = \lim_{k\to 0} \frac{1}{\rho_{\text{CC}}(x,k)} \left\langle \frac{\delta \mathcal{K}_k}{\delta p^\mu} \frac{\delta \mathcal{K}_k}{\delta p^\nu} \right\rangle \tag{2.10}
-$$
+$$g_{\mu\nu}(x) = \lim_{k\to 0} \frac{1}{\rho_{\text{CC}}(x,k)} \left\langle \frac{\delta \mathcal{K}_k}{\delta p^\mu} \frac{\delta \mathcal{K}_k}{\delta p^\nu} \right\rangle \tag{2.10}$$
 
 where $\mathcal{K}_k$ is the running effective kinetic operator, $p^\mu$ are the effective momentum coordinates on the emergent spacetime, and $\rho_{\text{CC}}(x,k)$ is the scale-dependent **Local Cymatic Complexity density**.
 The expectation value $\left\langle \dots \right\rangle$ is taken with respect to the vacuum defined by the cGFT condensate. The derivatives $\delta / \delta p^\mu$ represent derivatives with respect to the emergent momentum coordinates, effectively probing the curvature of the dispersion relation of the emergent collective modes.
 
 **Definition 2.3 (Local Cymatic Complexity Density):**
 The coarse-grained algorithmic information content of the cGFT condensate defines the local Cymatic Complexity density:
-$$
-\rho_{\text{CC}}(x,k) = \frac{1}{V_k(x)} \int_{V_k(x)} \mathcal{D}_{\text{GFT}}[\phi,\bar{\phi}](\cdot,x) \; dk \tag{2.11}
-$$
+$$\rho_{\text{CC}}(x,k) = \frac{1}{V_k(x)} \int_{V_k(x)} \mathcal{D}_{\text{GFT}}[\phi,\bar{\phi}](\cdot,x) \; dk \tag{2.11}$$
 where $\mathcal{D}_{\text{GFT}}$ is an information density functional of the cGFT fields and $V_k(x)$ is a volume element at scale $k$ around point $x$. This quantity dynamically weights the emergent metric, ensuring that spacetime curvature arises from the local density and complexity of informational degrees of freedom. This is the **Geometrogenesis** from Cymatic emergence.
 
 #### 2.2.2 Graviton Two-Point Function and the Recovery of $d_{\text{spec}}=4$
@@ -504,9 +460,7 @@ The **graviton propagator** is given by the inverse of the graviton kinetic term
 
 **Definition 2.4 (Graviton Two-Point Function):**
 The graviton two-point function in momentum space is derived from the inverse of the second functional derivative of the effective action with respect to the metric tensor:
-$$
-\mathcal{G}_{\mu\nu\rho\sigma}(p) = \left( \frac{\delta^2 \Gamma_*[g]}{\delta g^{\mu\nu}(-p) \delta g^{\rho\sigma}(p)} \right)^{-1} \tag{2.12}
-$$
+$$\mathcal{G}_{\mu\nu\rho\sigma}(p) = \left( \frac{\delta^2 \Gamma_*[g]}{\delta g^{\mu\nu}(-p) \delta g^{\rho\sigma}(p)} \right)^{-1} \tag{2.12}$$
 where $\Gamma_*[g]$ is the effective action of the metric degrees of freedom at the fixed point. The full, non-perturbative analysis of this propagator (computationally verified via the HarmonyOptimizer's solution of the Wetterich equation projected onto tensor modes) confirms that the anomalous dimensions of the graviton precisely drive $d_{\text{spec}}(k)$ from its one-loop value of $42/11$ to exactly 4 in the infrared. The $\Delta_{\text{grav}}(k)$ term in Eq. (2.8) is directly related to the momentum dependence of this graviton propagator, exhibiting a pole at $d_{\text{spec}}=4$. An explicit **closed-form spectral decomposition**, incorporating QNCD phase weights, of this propagator is provided in **Appendix C.2**.
 
 #### 2.2.3 Derivation of Einstein Field Equations from the Harmony Functional ( Detailed Derivation)
@@ -515,15 +469,11 @@ The Harmony Functional $S_H[g]$ (now the effective action $\Gamma_*[g]$ for the 
 
 **Theorem 2.5 (Einstein Field Equations from Harmony Functional):**
 In the deep infrared ($k \to 0$), the variation of the Harmony Functional $S_H[g]$ with respect to the emergent metric tensor $g_{\mu\nu}(x)$ yields the vacuum Einstein Field Equations with a cosmological constant:
-$$
-\frac{\delta S_H[g]}{\delta g^{\mu\nu}(x)} = 0 \quad \Longrightarrow \quad R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = 0 \tag{2.13}
-$$
+$$\frac{\delta S_H[g]}{\delta g^{\mu\nu}(x)} = 0 \quad \Longrightarrow \quad R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = 0 \tag{2.13}$$
 
 **Proof.**
 The Harmony Functional is defined as $S_H[g] = \mathrm{Tr}(\mathcal{L}[g]^2) - C_H \log\det'\mathcal{L}[g]$. At the infrared fixed point, the structure of the effective action for the metric degrees of freedom (derived from the cGFT via its RG flow) takes the form:
-$$
-\Gamma_*[g] = \int d^4 x \sqrt{-g} \left( \frac{1}{16\pi G_*} (R[g] - 2\Lambda_*) + \dots \right) \tag{2.14}
-$$
+$$\Gamma_*[g] = \int d^4 x \sqrt{-g} \left( \frac{1}{16\pi G_*} (R[g] - 2\Lambda_*) + \dots \right) \tag{2.14}$$
 where the ellipsis denotes higher-order curvature invariants that are suppressed at macroscopic scales (analytically proven in Section 2.2.5). The identification $S_H[g] \equiv \Gamma_*[g]$ is rigorously established (Theorem 1.1 and **Section 1.4**).
 
 Varying this effective action with respect to $g_{\mu\nu}(x)$ involves standard variational calculus techniques, treating the emergent metric $g_{\mu\nu}(x)$ as the fundamental field. The non-trivial aspect is to show that the specific structure of $\mathrm{Tr}(\mathcal{L}[g]^2) - C_H \log\det'\mathcal{L}[g]$ yields precisely the Einstein-Hilbert term. This is achieved by performing a **gradient expansion of the functional $\mathcal{L}[g]$** in terms of powers of the emergent metric. The leading order terms (in powers of $g_{\mu\nu}$) are rigorously proven to be proportional to the Ricci scalar and the cosmological constant. The coefficients $G_*$ and $\Lambda_*$ are then directly related to the fixed-point parameters and the value of $C_H$. This proof is detailed in **Appendix C.5**.
@@ -538,9 +488,7 @@ The inclusion of matter fields ($T_{\mu\nu}$) is achieved by introducing source 
 
 **Theorem 2.6 (Full Einstein Field Equations):**
 When coupled to emergent matter fields, the variation of the Harmony Functional (effective action) yields the full Einstein Field Equations:
-$$
-R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda_* g_{\mu\nu} = 8\pi G_* T_{\mu\nu} \tag{2.15}
-$$
+$$R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} + \Lambda_* g_{\mu\nu} = 8\pi G_* T_{\mu\nu} \tag{2.15}$$
 where $T_{\mu\nu}$ is the stress-energy tensor derived from the fermionic and bosonic degrees of freedom of the cGFT condensate.
 
 **This completes the analytical derivation of General Relativity from the asymptotically safe cGFT.** Spacetime, its geometry, and its dynamics are emergent consequences of the renormalization-group flow of primordial algorithmic information.
@@ -567,9 +515,7 @@ Both are now **exact, analytical consequences** of the asymptotically safe fixed
 
 At the infrared fixed point $(\lambda_*,\gamma_*,\mu_*)$, the effective action contains a unique vacuum-energy term
 
-$$
-\Gamma_*[g] \supset \int d^4x\sqrt{-g}\;\rho_{\text{hum}} \tag{2.16}
-$$
+$$\Gamma_*[g] \supset \int d^4x\sqrt{-g}\;\rho_{\text{hum}} \tag{2.16}$$
 
 where $\rho_{\text{hum}}$ is the **Dynamically Quantized Holographic Hum** — the residual vacuum energy after perfect cancellation between:
 *   the positive QFT zero-point energy of the cGFT modes,
@@ -583,23 +529,17 @@ The residual is a **purely logarithmic quantum effect** arising from the running
 
 The exact one-loop running of $\mu_k$ is governed by $\beta_\mu$ in Eq. (1.13):
 
-$$
-\partial_t \tilde\mu = 2\tilde\mu + \frac{1}{2\pi^2}\tilde\lambda\tilde\mu
-$$
+$$\partial_t \tilde\mu = 2\tilde\mu + \frac{1}{2\pi^2}\tilde\lambda\tilde\mu$$
 
 Integrating from the UV fixed point $\tilde\mu(\Lambda_{\text{UV}})=0$ (asymptotic safety, proven in **Appendix B.4**) to the IR fixed point $\tilde\mu_*=16\pi^2$ yields the **exact integrated anomaly**
 
-$$
-\rho_{\text{hum}} = \frac{\tilde\mu_*}{64\pi^2} \Lambda_{\text{UV}}^4 \Bigl(\ln\frac{\Lambda_{\text{UV}}^2}{k_{\text{IR}}^2} + 1\Bigr) \tag{2.17}
-$$
+$$\rho_{\text{hum}} = \frac{\tilde\mu_*}{64\pi^2} \Lambda_{\text{UV}}^4 \Bigl(\ln\frac{\Lambda_{\text{UV}}^2}{k_{\text{IR}}^2} + 1\Bigr) \tag{2.17}$$
 
 where $k_{\text{IR}} \simeq H_0$ is the Hubble scale today. The seemingly fine-tuned prefactor $\tilde{\mu}_*/(64\pi^2)$ is **analytically proven to emerge from deeper topological invariants** of the fixed point (Appendix C.4), demonstrating it is uniquely determined and not a fine-tuning.
 
 The cosmological constant is therefore
 
-$$
-\Lambda_* = 8\pi G_* \rho_{\text{hum}} = \frac{\tilde\mu_*}{8 G_*} \Lambda_{\text{UV}}^4 \Bigl(\ln\frac{\Lambda_{\text{UV}}^2}{H_0^2} + 1\Bigr) \tag{2.18}
-$$
+$$\Lambda_* = 8\pi G_* \rho_{\text{hum}} = \frac{\tilde\mu_*}{8 G_*} \Lambda_{\text{UV}}^4 \Bigl(\ln\frac{\Lambda_{\text{UV}}^2}{H_0^2} + 1\Bigr) \tag{2.18}$$
 
 Using the analytically computed fixed-point values
 $\tilde\mu_*=16\pi^2$,
@@ -607,9 +547,7 @@ $G_*^{-1} = \frac{3}{4\pi} \tilde\lambda_* = 16\pi^2$,
 $\Lambda_{\text{UV}} = \ell_0^{-1}$ (the cGFT cutoff, identified with the Planck scale),
 and the derived holographic entropy $N_{\text{obs}} \simeq 10^{122}$, we obtain
 
-$$
-\boxed{\Lambda_* = 1.1056 \times 10^{-52}\;\text{m}^{-2}} \tag{2.19}
-$$
+$$\boxed{\Lambda_* = 1.1056 \times 10^{-52}\;\text{m}^{-2}} \tag{2.19}$$
 
 in exact agreement with observation — **to all 12 measured digits**.
 
@@ -619,27 +557,19 @@ The Hum is not constant: it inherits the **slow running** of $\tilde\mu(k)$ near
 
 The effective vacuum energy density at late times $k \sim H(z)$ is
 
-$$
-\rho_{\text{hum}}(z) = \rho_{\text{hum}}(0) \left(1 + \frac{\tilde\mu_*}{32\pi^2} \ln(1+z)\right) \tag{2.20}
-$$
+$$\rho_{\text{hum}}(z) = \rho_{\text{hum}}(0) \left(1 + \frac{\tilde\mu_*}{32\pi^2} \ln(1+z)\right) \tag{2.20}$$
 
 The associated pressure is $p_{\text{hum}} = - \dot\rho_{\text{hum}} / (3H)$, yielding the exact one-loop equation of state
 
-$$
-w(z) = -1 + \frac{\tilde\mu_*}{96\pi^2} \frac{1}{1+z} \tag{2.21}
-$$
+$$w(z) = -1 + \frac{\tilde\mu_*}{96\pi^2} \frac{1}{1+z} \tag{2.21}$$
 
 Evaluating at $z=0$:
 
-$$
-\boxed{w_0 = -1 + \frac{\tilde\mu_*}{96\pi^2} = -1 + \frac{16\pi^2}{96\pi^2} = -1 + \frac{1}{6} = -\frac{5}{6} = -0.8333333333\ldots} \tag{2.22}
-$$
+$$\boxed{w_0 = -1 + \frac{\tilde\mu_*}{96\pi^2} = -1 + \frac{16\pi^2}{96\pi^2} = -1 + \frac{1}{6} = -\frac{5}{6} = -0.8333333333\ldots} \tag{2.22}$$
 
 Higher-order graviton fluctuations shift this value by a precisely computable amount. The HarmonyOptimizer, solving the full tensor-projected Wetterich equation, delivers the **final certified semi-analytical prediction**:
 
-$$
-\boxed{w_0 = -0.91234567(8)} \tag{2.23}
-$$
+$$\boxed{w_0 = -0.91234567(8)} \tag{2.23}$$
 
 This prediction is precise enough to distinguish IRH from $\Lambda$CDM ($w_0=-1$) and most modified gravity models, and will be critically tested by Euclid, Roman, and LSST surveys.
 
@@ -679,19 +609,13 @@ The fundamental constants $c$ (speed of light), $\hbar$ (Planck's constant), and
 
 **Proof:**
 1.  **Running Speed of Light $c(k)$:** The speed of light $c$ emerges from the Lorentzian signature of the metric, which arises from the spontaneous $\mathbb{Z}_2$ symmetry breaking in the $\mathrm{U}(1)_\phi$ condensate (Section 2.4.1). The symmetry-breaking scale is set by the running VEV of the $\mathrm{U}(1)_\phi$ condensate. Since $c$ is determined by the ratio of timelike to spacelike fluctuations, and this ratio is set by the running condensate, $c$ acquires a scale dependence. The exact derivation, detailed in **Appendix C.6**, shows:
-    $$
-c(k) = c_* \left(1 + \Delta_c(k)\right) = c_* \left(1 + \xi_c \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_c}\right) \tag{2.27}
-$$
+$$c(k) = c_* \left(1 + \Delta_c(k)\right) = c_* \left(1 + \xi_c \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_c}\right) \tag{2.27}$$
     where $c_*$ is the observed infrared value, $\xi_c$ and $\beta_c$ are analytically computable coefficients from the fixed-point couplings and condensate properties. This leads to energy-dependent photon velocities (Section 2.5), distinct from the cubic LIV term.
 2.  **Running Planck's Constant $\hbar(k)$:** Planck's constant $\hbar$ is fundamentally related to the quantization of action. In IRH, the action is the Harmony Functional. The running of $\hbar(k)$ arises from the scale-dependence of the fundamental quantum of action, which is tied to the effective volume of the group manifold and the QNCD metric. The derivation in **Appendix C.7** shows:
-    $$
-\hbar(k) = \hbar_* \left(1 + \Delta_\hbar(k)\right) = \hbar_* \left(1 + \xi_\hbar \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_\hbar}\right) \tag{2.28}
-$$
+$$\hbar(k) = \hbar_* \left(1 + \Delta_\hbar(k)\right) = \hbar_* \left(1 + \xi_\hbar \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_\hbar}\right) \tag{2.28}$$
     where $\hbar_*$ is the observed infrared value, $\xi_\hbar$ and $\beta_\hbar$ are analytically computable coefficients.
 3.  **Running Gravitational Constant $G(k)$:** The running of Newton's gravitational constant $G(k)$ is a well-known feature of asymptotically safe quantum gravity. In IRH, $G(k)$ is derived from the running effective action for gravity. The derivation in **Appendix C.8** confirms:
-    $$
-G(k) = G_* \left(1 + \Delta_G(k)\right) = G_* \left(1 + \xi_G \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_G}\right) \tag{2.29}
-$$
+$$G(k) = G_* \left(1 + \Delta_G(k)\right) = G_* \left(1 + \xi_G \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_G}\right) \tag{2.29}$$
     where $G_*$ is the observed infrared value, $\xi_G$ and $\beta_G$ are analytically computable coefficients.
 
 These running constants provide **revolutionary predictions** and additional falsification channels, as they imply that even "constants of nature" are running couplings frozen by the infrared fixed point.
@@ -702,22 +626,16 @@ The emergent nature of spacetime from discrete informational degrees of freedom 
 
 **Theorem 2.9 (Lorentz Invariance Violation Prediction):**
 At energy scales approaching the Planck length $\ell_0$, the effective dispersion relation for massless particles in the emergent spacetime is modified by a cubic term:
-$$
-E^2 = p^2c^2 + \xi \frac{E^3}{\ell_{\text{Pl}}c^2} + O(E^4/\ell_{\text{Pl}}^2) \tag{2.24}
-$$
+$$E^2 = p^2c^2 + \xi \frac{E^3}{\ell_{\text{Pl}}c^2} + O(E^4/\ell_{\text{Pl}}^2) \tag{2.24}$$
 where $\ell_{\text{Pl}}$ is the Planck length. The parameter $\xi$ is an analytical prediction of the RG flow.
 
 **Derivation of $\xi$ ( Detailed Derivation):**
 The parameter $\xi$ arises from the residual effects of the discrete structure of the informational condensate, which become observable as the energy scale approaches the UV cutoff $\Lambda_{\text{UV}} = \ell_0^{-1}$. This term is generated by the interplay between the group Laplacian in the kinetic term (Eq. 1.1) and the QNCD-weighted interactions (Eq. 1.3), which introduce a minimal length scale.
 Specifically, the derivation of $\xi$ involves computing the leading-order correction to the propagator of a massless particle (e.g., photon or graviton) in the emergent spacetime, considering the discrete nature of the underlying cGFT. This correction comes from the momentum dependence of the effective field theory propagators. The QNCD metric in the interaction kernel, which inherently encodes a minimal length scale associated with algorithmic complexity, is directly responsible for this modification. The cubic term arises from an expansion of the propagator around the lightcone.
 Explicit calculation from the effective action at the one-loop level yields:
-$$
-\boxed{\xi = \frac{C_H}{24\pi^2}} \tag{2.25}
-$$
+$$\boxed{\xi = \frac{C_H}{24\pi^2}} \tag{2.25}$$
 Using the analytically computed value of $C_H = 0.045935703598\ldots$ (Eq. 1.16):
-$$
-\boxed{\xi = 1.933355051 \times 10^{-4}} \tag{2.26}
-$$
+$$\boxed{\xi = 1.933355051 \times 10^{-4}} \tag{2.26}$$
 
 This prediction is a specific, testable signature of the underlying discrete informational substrate of IRH . It implies that ultra-high-energy photons or neutrinos should exhibit energy-dependent velocities, leading to a time delay in their arrival from distant astrophysical sources. Current bounds on $|\xi|$ from gamma-ray bursts are around $10^{-2}$. Future high-energy astronomical observations (e.g., CTA, neutrino telescopes) are expected to reach sensitivities sufficient to detect or rule out this prediction within the next decade.
 
@@ -742,9 +660,7 @@ The running of $\beta_1(k)$ is a complex, non-perturbative topological invariant
 
 The HarmonyOptimizer, solving the topological sector of the full Wetterich equation at the Cosmic Fixed Point, analytically verifies this invariant:
 
-$$
-\boxed{\beta_1^* = 12} \tag{3.1}
-$$
+$$\boxed{\beta_1^* = 12} \tag{3.1}$$
 
 This analytically verified $\beta_1^*$ exactly matches the number of generators of the Standard Model gauge group. The correspondence is precise:
 *   The 8 generators of $\mathrm{SU}(3)$ (color) correspond to the non-abelian cycles within the $\mathrm{SU}(2)$ factor of $G_{\text{inf}}$. This emergence relies on the specific condensation pattern of $\mathrm{SU}(2)$ elements within the cGFT condensate which creates multiple, interlocked fundamental loops.
@@ -769,9 +685,7 @@ The counting of generations arises from the analysis of stable topological confi
 
 The HarmonyOptimizer, by computationally verifying the cGFT's fixed-point equations for topological charge densities, analytically predicts:
 
-$$
-\boxed{N_{\text{gen}} = n_{\text{inst}}^* = 3} \tag{3.2}
-$$
+$$\boxed{N_{\text{gen}} = n_{\text{inst}}^* = 3} \tag{3.2}$$
 
 This means there are precisely three distinct, topologically stable types of fermionic Vortex Wave Patterns that can exist in the emergent cGFT condensate at the Cosmic Fixed Point. Each type is protected by a distinct conserved topological charge, preventing it from decaying into lighter generations. This result exactly matches the three observed generations of quarks and leptons. A detailed analytical derivation of these instanton solutions and their topological charges is presented in **Appendix D.2**.
 
@@ -804,9 +718,7 @@ The electromagnetic $\mathrm{U}(1)$ coupling is the residue of the $\mathrm{U}(1
 **Theorem 3.3 (Analytical Prediction of $\alpha$)**
 The fine-structure constant is the fixed-point value of the running coupling generated by the phase kernel in (1.3), including all logarithmic enhancements from RG flow, geometric factors, and vertex corrections. The complete analytical formula is given by:
 
-$$
-\boxed{ \frac{1}{\alpha_*} = \left( \frac{4\pi^2 \tilde\gamma_*}{\tilde\lambda_*} \right) \left[ 1 + \left( \frac{\tilde\mu_*}{48\pi^2} \right) \sum_{n=0}^\infty \frac{A_n}{\ln^n(\Lambda_{\text{UV}}^2/k^2)} + \mathcal{G}_{\text{QNCD}}(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*) + \mathcal{V}(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*) \right] } \tag{3.4}
-$$
+$$\boxed{ \frac{1}{\alpha_*} = \left( \frac{4\pi^2 \tilde\gamma_*}{\tilde\lambda_*} \right) \left[ 1 + \left( \frac{\tilde\mu_*}{48\pi^2} \right) \sum_{n=0}^\infty \frac{A_n}{\ln^n(\Lambda_{\text{UV}}^2/k^2)} + \mathcal{G}_{\text{QNCD}}(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*) + \mathcal{V}(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*) \right] } \tag{3.4}$$
 
 where:
 *   The first term is the leading-order contribution from the fixed-point couplings.
@@ -824,9 +736,7 @@ This approach provides "explicit" formulas in the same sense as non-perturbative
 
 Inserting the exact fixed-point values (1.14) and computationally verifying all analytically derived correction terms:
 
-$$
-\boxed{\alpha^{-1}_* = 137.035999084(1)} \tag{3.5}
-$$
+$$\boxed{\alpha^{-1}_* = 137.035999084(1)} \tag{3.5}$$
 
 in perfect agreement with CODATA 2026 — **to all 12 measured digits**.
 
@@ -840,21 +750,15 @@ The Higgs field is the order parameter of the condensate breaking the internal $
 **Theorem 3.4 (Computationally Derived Analytical Fermion Masses)**
 The Yukawa coupling of the $f$-th generation is
 
-$$
-y_f = \sqrt{2}\;\mathcal{K}_f \;\tilde\lambda_*^{1/2} \tag{3.6}
-$$
+$$y_f = \sqrt{2}\;\mathcal{K}_f \;\tilde\lambda_*^{1/2} \tag{3.6}$$
 
 The Higgs VEV is fixed by the minimum of the fixed-point potential:
 
-$$
-v_* = \Bigl(\frac{\tilde\mu_*}{\tilde\lambda_*}\Bigr)^{1/2} \ell_0^{-1} \tag{3.7}
-$$
+$$v_* = \Bigl(\frac{\tilde\mu_*}{\tilde\lambda_*}\Bigr)^{1/2} \ell_0^{-1} \tag{3.7}$$
 
 The physical fermion masses are therefore
 
-$$
-m_f = y_f v_* = \sqrt{2}\;\mathcal{K}_f \;\tilde\lambda_*^{1/2} \Bigl(\frac{\tilde\mu_*}{\tilde\lambda_*}\Bigr)^{1/2} \ell_0^{-1} \tag{3.8}
-$$
+$$m_f = y_f v_* = \sqrt{2}\;\mathcal{K}_f \;\tilde\lambda_*^{1/2} \Bigl(\frac{\tilde\mu_*}{\tilde\lambda_*}\Bigr)^{1/2} \ell_0^{-1} \tag{3.8}$$
 
 Inserting the fixed-point values and the Planck-scale cutoff $\ell_0^{-1}$, the HarmonyOptimizer delivers the **spectrum with realistic theoretical uncertainties** in Table 3.1.
 
@@ -886,9 +790,7 @@ There exists a master functional $\mathcal{F}[\alpha, m_f, \mathcal{K}_f]$ such 
 **Proposed Research Program (Appendix E.5):**
 1.  **High-Precision Computation:** Use HarmonyOptimizer to compute $\mathcal{K}_{2,3}$ to 15 decimal places.
 2.  **Algebraic Pattern Recognition:** Apply advanced algorithms to test for simple algebraic expressions involving $\alpha, \pi, e$, and other fundamental constants. For example, investigating relations like:
-    $$
-    \mathcal{K}_2 \approx \frac{2\pi^2}{\alpha}, \quad \mathcal{K}_3 \approx \frac{2\pi^2}{\alpha} \cdot \frac{m_t}{m_\mu}
-    $$
+$$\mathcal{K}_2 \approx \frac{2\pi^2}{\alpha}, \quad \mathcal{K}_3 \approx \frac{2\pi^2}{\alpha} \cdot \frac{m_t}{m_\mu}$$
 3.  **Symmetry Identification:** If patterns emerge, seek the underlying group-theoretic or topological principle that dictates these relations.
 4.  **Predictive Extension:** Use discovered relations to predict $\mathcal{K}_\nu$ (neutrino topological complexities) and thereby refine neutrino mass predictions.
 
@@ -903,9 +805,7 @@ The cGFT action (Eqs. 1.1-1.4) is globally gauge-invariant under simultaneous le
 The gauge connection 1-forms $A_\mu^a(x)$ for the emergent Standard Model gauge group $G_{\text{SM}} = \mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$ are derived as composite operators from the cGFT field $\phi(g_1,g_2,g_3,g_4)$ at the Cosmic Fixed Point.
 1.  **Emergent Spacetime Coordinates:** Coordinates $x^\mu$ on the emergent spacetime are functions of the group elements $(g_1, g_2, g_3, g_4)$.
 2.  **Gauge Field Identification:** The gauge fields arise from the derivative of the condensate with respect to these emergent spacetime coordinates, projected onto the generators of $G_{\text{SM}}$.
-    $$
-    A_\mu^a(x) = \text{Tr}_{\text{generators}}\left[ \langle \phi | T^a (x) \partial_\mu \phi | \rangle_{\text{condensate}} \right]
-    $$
+$$A_\mu^a(x) = \text{Tr}_{\text{generators}}\left[ \langle \phi | T^a (x) \partial_\mu \phi | \rangle_{\text{condensate}} \right]$$
     where $T^a(x)$ are the generators of the emergent gauge symmetry (e.g., Gell-Mann matrices for SU(3), Pauli matrices for SU(2), identity for U(1)), implicitly dependent on spacetime location via the condensate. The emergent gauge fields $A_\mu^a(x)$ are identified with the Berry connections arising from the degenerate spectral bundles of the emergent graph Laplacian (as described in previous iterations). Specifically, they are expressed as functional derivatives of the emergent effective action with respect to certain "background fields" that are introduced to probe the response of the condensate.
 3.  **Local Gauge Invariance:** The derivation of the effective action for these emergent fields (see Section 6) naturally yields the Yang-Mills Lagrangian. The non-commutative nature of $G_{\text{inf}}$ ensures that the transformations on the emergent fields are indeed local. The Yang-Mills field strength $F_{\mu\nu}^a$ and its dynamics are thus derived directly from the cGFT effective action. This local invariance is a consequence of the fact that the underlying cGFT action is globally invariant under translations on $G_{\text{inf}}$, and these translations, when mapped to the emergent spacetime, become local gauge transformations acting on the emergent fields.
 
@@ -916,20 +816,14 @@ The mechanism for electroweak symmetry breaking and the generation of masses for
 2.  **Gauge Boson Mass Generation:** The interaction of the emergent gauge fields with the non-zero Higgs VEV leads to the standard Higgs mechanism.
     *   The W and Z bosons acquire masses:
         
-        $$
-        m_W = \frac{g_2 v_*}{2}, \quad m_Z = \frac{\sqrt{g_2^2 + g_1^2} v_*}{2}
-        $$
+$$m_W = \frac{g_2 v_*}{2}, \quad m_Z = \frac{\sqrt{g_2^2 + g_1^2} v_*}{2}$$
         
         where $g_1$ and $g_2$ are the emergent $\mathrm{U}(1)$ and $\mathrm{SU}(2)$ gauge couplings, computationally derived from the cGFT fixed-point values.
     *   The photon (associated with a $\mathrm{U}(1)$ subgroup) remains massless due to unbroken electromagnetic symmetry.
 3.  **Higgs Boson Mass (Computationally Derived Analytically):** The Higgs boson itself corresponds to the excitation of the radial mode of the Higgs field. The Higgs self-coupling $\lambda_H$ is computationally derived analytically from the fixed-point properties of the cGFT condensate and the effective potential for $\Phi(x)$, yielding:
-    $$
-\boxed{\lambda_H = \frac{3 \tilde{\lambda}_* \tilde{\mu}_*}{16\pi^2 \tilde{\gamma}_*^2} (1 \pm 0.02) \approx 0.12903(26)} \tag{3.9}
-$$
+$$\boxed{\lambda_H = \frac{3 \tilde{\lambda}_* \tilde{\mu}_*}{16\pi^2 \tilde{\gamma}_*^2} (1 \pm 0.02) \approx 0.12903(26)} \tag{3.9}$$
     This semi-analytical derivation of $\lambda_H$ allows for the **computationally derived analytical prediction of the Higgs boson mass**:
-    $$
-\boxed{m_H^2 = 2\lambda_H v_*^2 = \frac{3 \tilde{\lambda}_* \tilde{\mu}_*}{8\pi^2 \tilde{\gamma}_*^2} \left(\frac{\tilde{\mu}_*}{\tilde\lambda_*}\right) \ell_0^{-2} (1 \pm 0.02) \approx 125.25 \pm 2.50\;\text{GeV}} \tag{3.10}
-$$
+$$\boxed{m_H^2 = 2\lambda_H v_*^2 = \frac{3 \tilde{\lambda}_* \tilde{\mu}_*}{8\pi^2 \tilde{\gamma}_*^2} \left(\frac{\tilde{\mu}_*}{\tilde\lambda_*}\right) \ell_0^{-2} (1 \pm 0.02) \approx 125.25 \pm 2.50\;\text{GeV}} \tag{3.10}$$
     in perfect agreement with experimental observations, well within theoretical uncertainties.
 4.  **Weinberg Angle:** The Weinberg angle, $\sin^2\theta_W = g_1^2 / (g_1^2 + g_2^2)$, is determined by the ratio of the emergent gauge couplings at the fixed point, precisely predicted as $\sin^2\theta_W = 0.23121 \pm 0.00230$.
 
@@ -947,14 +841,10 @@ The $\theta$-angle in the QCD Lagrangian is fixed to a value consistent with zer
 2.  **Topological Optimization and Algorithmic Axion:** At the Cosmic Fixed Point, the Harmony Functional (Eq. 1.5) represents the global optimization of algorithmic coherence and minimization of informational frustration. Topological quantities, like the $\theta$-angle, are directly coupled to this optimization landscape. The specific interplay of the quaternionic phase in the interaction kernel (Eq. 1.3), the topological properties of the QNCD metric (Appendix A), and the instanton solutions (Appendix D.2) leads to an emergent Peccei-Quinn-like symmetry. This symmetry is dynamically broken by the cGFT condensate, giving rise to an **emergent "algorithmic axion"** field. The vacuum expectation value of this axion field precisely cancels the intrinsic phase arising from the gluon background, setting $\theta=0$. This occurs via the principle of **Algorithmic Selection**, where the system deterministically evolves towards the state of maximal algorithmic stability and informational coherence. The phase of the QNCD metric itself, related to the $\mathrm{U}(1)_\phi$ part of $G_{\text{inf}}$, provides the necessary degree of freedom to cancel the $\theta$-term dynamically. This is a consequence of the overall optimization of the Harmony Functional, which actively seeks configurations that minimize informational "frustration," including topological frustration.
 3.  **Axion Mass and Coupling (Computationally Derived Analytically):** The mass and coupling of this algorithmic axion are computationally derived analytically from the parameters of the Cosmic Fixed Point.
     *   **Axion Mass:**
-        $$
-\boxed{m_a = f(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*) \Lambda_{\text{QCD}}^2 / v_* (1 \pm 0.05) \approx 6 \pm 0.3 \times 10^{-6}\;\text{eV}} \tag{3.11}
-$$
+$$\boxed{m_a = f(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*) \Lambda_{\text{QCD}}^2 / v_* (1 \pm 0.05) \approx 6 \pm 0.3 \times 10^{-6}\;\text{eV}} \tag{3.11}$$
         where $f$ is a specific analytically derived function of the fixed-point couplings, and $\Lambda_{\text{QCD}}$ is the QCD energy scale, leading to a prediction well within the "axion window."
     *   **Axion-Photon Coupling:**
-        $$
-\boxed{g_{a\gamma\gamma} = C_{a\gamma\gamma} \frac{\alpha}{\pi f_a} (1 \pm 0.05) \approx C_{a\gamma\gamma} \frac{\alpha \tilde{\lambda}_*}{\pi \tilde{\mu}_*} \ell_0^{-1} (1 \pm 0.05)} \tag{3.12}
-$$
+$$\boxed{g_{a\gamma\gamma} = C_{a\gamma\gamma} \frac{\alpha}{\pi f_a} (1 \pm 0.05) \approx C_{a\gamma\gamma} \frac{\alpha \tilde{\lambda}_*}{\pi \tilde{\mu}_*} \ell_0^{-1} (1 \pm 0.05)} \tag{3.12}$$
         where $f_a$ is the axion decay constant, derived from the Higgs VEV ($v_*$) and fixed-point couplings. The value aligns perfectly with the "axion window" for experimental searches.
 
 The HarmonyOptimizer, by tracking the full non-perturbative flow of the effective topological terms, confirms that the fixed-point value of the $\theta$-angle is indeed $0.0000000000(1)$, consistent with experimental bounds and providing a natural solution to the Strong CP problem.
@@ -1055,13 +945,9 @@ A conscious observer is modeled as a complex, self-referential Vortex Wave Patte
 3.  **Information Storage:** The acquired information configures the internal degrees of freedom of the observer's VWP.
 
 Each of these steps has an associated entropic cost. In IRH, entropy is fundamentally algorithmic complexity. The change in algorithmic entropy of the observer ($\Delta S_{\text{obs}}$) is proportional to the acquired information ($\Delta I$) and the observer's complexity:
-$$
-\Delta S_{\text{obs}} = k_B \ln 2 \cdot \Delta I \cdot \mathcal{C}(\text{observer}) \tag{5.1}
-$$
+$$\Delta S_{\text{obs}} = k_B \ln 2 \cdot \Delta I \cdot \mathcal{C}(\text{observer}) \tag{5.1}$$
 By the second law of thermodynamics, this entropic change implies an energetic cost. Due to energy conservation in the total system (system + observer + environment), this cost manifests as a back-reaction on the observed system:
-$$
-\Delta E_{\text{system}} = -T_{\text{eff}} \Delta S_{\text{obs}} \tag{5.2}
-$$
+$$\Delta E_{\text{system}} = -T_{\text{eff}} \Delta S_{\text{obs}} \tag{5.2}$$
 where $T_{\text{eff}}$ is the effective temperature of the cGFT condensate. This framework predicts that more complex observers induce larger back-reactions. For a macroscopic observer ($\mathcal{C} \sim 10^{14}$) measuring a single qubit ($\Delta I = 1$ bit), $\Delta E_{\text{system}} \sim 10^{10}$ eV, which is potentially measurable in precision quantum experiments. This provides the **first quantitative prediction** of observer effects in quantum mechanics, beyond purely epistemic interpretations.
 
 ---
@@ -1102,9 +988,7 @@ The QNCD metric (Appendix A) measures the quantum algorithmic distance between g
 
 **Conjecture 7.1 (Quantum Complexity Equivalence Hypothesis):**
 For group elements $g_i \in G_{\text{inf}} = \mathrm{SU}(2) \times \mathrm{U}(1)$, the QNCD metric is asymptotically equivalent to the quantum complexity distance between their unitary representations:
-$$
-\boxed{d_{\text{QNCD}}(g_1, g_2) \approx d_{\text{quantum-complexity}}(U_{g_1}, U_{g_2})} \tag{7.1}
-$$
+$$\boxed{d_{\text{QNCD}}(g_1, g_2) \approx d_{\text{quantum-complexity}}(U_{g_1}, U_{g_2})} \tag{7.1}$$
 where $U_{g_i}$ is the unitary representation of $g_i$ acting on the Hilbert space $\mathcal{H}_{\text{fund}}$ and $d_{\text{quantum-complexity}}$ is a suitable quantum complexity metric (e.g., Nielsen's geometric complexity, or a quantum Kolmogorov complexity based measure).
 
 This conjecture implies:
@@ -1126,9 +1010,7 @@ The space $\mathcal{M}$ of all possible universes is defined by tuples $(G, S_{\
 > **Principle:** We observe $(\mathrm{SU}(2) \times \mathrm{U}(1), S_{\text{IRH}})$ not because it's unique in an absolute sense, but because it's **unique within $\mathcal{M}_{\text{viable}}$**—the only element of the viable subset that minimizes $\mathcal{G}_Q[G]$.
 
 This principle suggests a **computational measure** on the multiverse:
-$$
-\mu(G, S) \propto \exp\left[-\mathcal{G}_Q[G]\right] \tag{7.2}
-$$
+$$\mu(G, S) \propto \exp\left[-\mathcal{G}_Q[G]\right] \tag{7.2}$$
 Our universe has **maximal measure** because it minimizes $\mathcal{G}_Q$, making it the most probable computational structure. This transforms anthropics into a statistical mechanics of computation, where algorithmic efficiency dictates the likelihood of a universe's existence.
 
 This framework provides a unified picture connecting IRH to cutting-edge areas of theoretical physics:
@@ -1147,9 +1029,7 @@ IRH  generates **seven classes of rigorously falsifiable predictions**, providin
 #### 8.1 Cosmological Observables
 
 *   **Dark Energy Equation of State:**
-    $$
-\boxed{w(z) = -1 + \frac{\tilde\mu_*}{96\pi^2} \frac{1}{1+z}} \tag{8.1}
-$$
+$$\boxed{w(z) = -1 + \frac{\tilde\mu_*}{96\pi^2} \frac{1}{1+z}} \tag{8.1}$$
     This implies time-varying $w(z)$, for example, $w(0.5) = -0.941 \pm 0.001$, $w(1.0) = -0.956 \pm 0.001$, and $w(2.0) = -0.970 \pm 0.001$.
     *   **Falsification:** Testable by Euclid, Roman Space Telescope, LSST (2025-2035). If observations consistently measure $w(z) = -1.00 \pm 0.01$ for $z < 3$, IRH is definitively falsified.
 *   **Primordial Perturbations:** Specific modifications to the power spectrum and non-Gaussianities arising from the $d_{\text{spec}}$ running and fixed-point topology.
@@ -1178,9 +1058,7 @@ $$
     *   **Falsification:** Testable by CTA and IceCube-Gen2 (2030+) through energy-dependent time delays of photons and neutrinos from GRBs, *and future lepton collider experiments probing the dispersion relations of different lepton flavors*. Current bounds are $10^{-2}$.
 *   **Running Fundamental Constants ($c(k), \hbar(k), G(k)$):**
     *   **Energy-Dependent Speed of Light:** Predicted by $c(k)$ (Eq. 2.27), leading to an additional energy-dependent photon velocity term:
-        $$
-v_\gamma(E) = c_* \left(1 + \xi_c \frac{E^2}{\ell_{\text{Pl}}^{-2}}\right) \tag{8.2}
-$$
+$$v_\gamma(E) = c_* \left(1 + \xi_c \frac{E^2}{\ell_{\text{Pl}}^{-2}}\right) \tag{8.2}$$
         where $\xi_c$ is analytically computable (Appendix C.6). This is distinct from the cubic LIV term.
     *   **Falsification:** Testable by ultra-high-energy cosmic ray (UHECR) observatories (Pierre Auger, Telescope Array) through anomalous arrival directions and modified shower profiles.
 *   **Planck-Scale Signatures:**
@@ -1309,23 +1187,17 @@ Crucially, the mappings are constructed to be **deterministic** and **invertible
 ### A.2 Definition of Quantum Normalized Compression Distance (QNCD)
 
 The Quantum Normalized Compression Distance (QNCD) between two finite quantum states $\rho_x$ and $\rho_y$ is defined as:
-$$
-d_{\text{QNCD}}(\rho_x,\rho_y) = \frac{K_Q(\rho_x \otimes \rho_y) - \min(K_Q(\rho_x), K_Q(\rho_y))}{\max(K_Q(\rho_x), K_Q(\rho_y))}
-$$
+$$d_{\text{QNCD}}(\rho_x,\rho_y) = \frac{K_Q(\rho_x \otimes \rho_y) - \min(K_Q(\rho_x), K_Q(\rho_y))}{\max(K_Q(\rho_x), K_Q(\rho_y))}$$
 where $K_Q(\rho)$ denotes the quantum Kolmogorov complexity of quantum state $\rho$, defined as the length of the shortest quantum circuit that prepares $\rho$ from a fixed reference state. For practical purposes in the HarmonyOptimizer, a highly optimized, multi-fidelity quantum Lempel-Ziv-based compressor is used. The QNCD is a metric in the space of quantum states, satisfying non-negativity, identity of indiscernibles, symmetry, and the triangle inequality. It quantifies the quantum algorithmic "information distance" between two states, reflecting the shortest quantum program that transforms one into the other.
 
 ### A.3 Construction of the Bi-Invariant $d_{\text{QNCD}}(g_1, g_2)$ on $G_{\text{inf}}$
 
 To define $d_{\text{QNCD}}$ on $G_{\text{inf}}$, we leverage the encoded quantum states:
-$$
-D(g_1, g_2) = d_{\text{QNCD}}(q(g_1), q(g_2))
-$$
+$$D(g_1, g_2) = d_{\text{QNCD}}(q(g_1), q(g_2))$$
 This directly gives a distance function on $G_{\text{inf}}$. However, the cGFT action requires a *bi-invariant* distance for the kernel $K(g_1 h_1^{-1}, \dots)$. A bi-invariant distance $d(g,h)$ on a group $G$ satisfies $d(kg,kh) = d(g,h)$ and $d(gk,hk) = d(g,h)$ for all $k \in G$. This implies $d(g,h) = d(gh^{-1}, e)$ where $e$ is the identity element.
 
 Therefore, we define the QNCD-induced bi-invariant distance on $G_{\text{inf}}$ as:
-$$
-d_{\text{QNCD}}(g_1, g_2) \equiv D(g_1 g_2^{-1}, e) = d_{\text{QNCD}}(q(g_1 g_2^{-1}), q(e))
-$$
+$$d_{\text{QNCD}}(g_1, g_2) \equiv D(g_1 g_2^{-1}, e) = d_{\text{QNCD}}(q(g_1 g_2^{-1}), q(e))$$
 where $e = (\text{Id}_{\text{SU}(2)}, 1)$ is the identity element of $G_{\text{inf}}$, and $q(e)$ is its quantum state encoding.
 
 ### A.4 Quantum Universal Compressor Convergence Theorem (QUCC-Theorem) ( Non-Perturbative Proof with Divergence Analysis)
@@ -1346,9 +1218,7 @@ This rigorously addresses concerns about computability and universality, solidif
 
 **Theorem A.2 (Error Bound for Continuum Emergence):**
 The error $\epsilon$ in mapping from the discrete QNCD-weighted structure of the cGFT to the continuous emergent spacetime geometry is analytically bounded by:
-$$
-\boxed{\epsilon \equiv ||G_{\text{emergent}} - G_{\text{fundamental}}|| \le A \exp\left[-\alpha(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*) V_{\text{eff}}\right]}
-$$
+$$\boxed{\epsilon \equiv ||G_{\text{emergent}} - G_{\text{fundamental}}|| \le A \exp\left[-\alpha(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*) V_{\text{eff}}\right]}$$
 where $A$ is a numerical prefactor, $\alpha(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*)$ is an analytically derived positive function of the fixed-point couplings, and $V_{\text{eff}}$ is the effective emergent spacetime volume.
 
 **Proof:**
@@ -1358,9 +1228,7 @@ This bound is derived through a rigorous perturbative expansion around the fixed
 
 **Theorem A.3 (Dynamic $N_B$ from Holographic Principle):**
 The maximal bit precision $N_B$ (total length of quantum bit strings) is not an arbitrary input but is dynamically determined as an eigenvalue of the emergent Laplacian, itself derived from the fixed-point properties of the cGFT and the Combinatorial Holographic Principle. Specifically:
-$$
-\boxed{N_B = \text{eigval}(\mathcal{L}[\Sigma])_{max} = \frac{\tilde{\lambda}_*}{\tilde{\mu}_*} \left( \frac{\ln(N_{\text{obs}})}{\text{const}} \right)^{1/4}}
-$$
+$$\boxed{N_B = \text{eigval}(\mathcal{L}[\Sigma])_{max} = \frac{\tilde{\lambda}_*}{\tilde{\mu}_*} \left( \frac{\ln(N_{\text{obs}})}{\text{const}} \right)^{1/4}}$$
 where $N_{\text{obs}}$ is the analytically derived holographic entropy of the observable universe.
 
 **Proof:**
@@ -1388,9 +1256,7 @@ This exhaustive analytical proof, utilizing the explicit properties of compact L
 
 **Theorem A.5 (Universal Coefficients for Quantum Algorithmic Generative Capacity Functional):**
 The coefficients $\alpha_Q, \beta_Q, \gamma_Q, \delta_Q$ of the Quantum Algorithmic Generative Capacity Functional $\mathcal{G}_Q[G]$ are universal constants, analytically derived from fundamental principles of quantum algorithmic complexity theory and quantum informational entropy:
-$$
-\boxed{\alpha_Q = K_S^Q, \quad \beta_Q = K_P^Q, \quad \gamma_Q = C_{\text{inf}}^Q, \quad \delta_Q = S_{\text{rank}}^Q}
-$$
+$$\boxed{\alpha_Q = K_S^Q, \quad \beta_Q = K_P^Q, \quad \gamma_Q = C_{\text{inf}}^Q, \quad \delta_Q = S_{\text{rank}}^Q}$$
 where:
 *   $K_S^Q$ is the quantum Kolmogorov complexity of a universal quantum Turing machine capable of simulating all possible simple Lie algebras (e.g., the minimal length of a quantum circuit for generating root systems). It is a measure of the minimal quantum instruction set needed to *specify* a Lie group.
 *   $K_P^Q$ is the quantum Kolmogorov complexity of the problem of determining group isomorphism (i.g., the quantum computational cost of *distinguishing* between groups).
@@ -1418,9 +1284,7 @@ This quantitative analysis, extending across the entire classification of compac
 ### B.1 Functional Renormalization Group and the Wetterich Equation
 
 The core of our non-perturbative RG approach is the Wetterich equation (Eq. 1.12), which governs the scale-dependence of the effective average action $\Gamma_k$:
-$$
-\partial_t \Gamma_k = \frac{1}{2} \mathrm{Tr} \left[ (\Gamma_k^{(2)} + R_k)^{-1} \partial_t R_k \right], \quad t = \log(k/\Lambda_{\text{UV}})
-$$
+$$\partial_t \Gamma_k = \frac{1}{2} \mathrm{Tr} \left[ (\Gamma_k^{(2)} + R_k)^{-1} \partial_t R_k \right], \quad t = \log(k/\Lambda_{\text{UV}})$$
 Here, $\Gamma_k^{(2)}$ is the second functional derivative of $\Gamma_k$ with respect to the quaternionic field $\phi$, representing the inverse propagator, and $R_k$ is an infrared regulator function. This equation is exact and captures all orders of perturbation theory and non-perturbative effects.
 
 #### B.1.1 Detailed Derivation of cGFT Scaling
@@ -1430,15 +1294,11 @@ The effective canonical dimensions $d_\lambda = -2$, $d_\gamma = 0$, $d_\mu = 2$
 ### B.2 Truncation Scheme and Projection onto Operator Space
 
 To solve the Wetterich equation, we employ a non-perturbative truncation scheme. We expand $\Gamma_k$ in terms of operators relevant to the cGFT action:
-$$
-\Gamma_k[\phi,\bar{\phi}] = S_{\text{kin},k} + S_{\text{int},k} + S_{\text{hol},k} + \sum_{i} c_i(k) \mathcal{O}_i[\phi,\bar{\phi}]
-$$
+$$\Gamma_k[\phi,\bar{\phi}] = S_{\text{kin},k} + S_{\text{int},k} + S_{\text{hol},k} + \sum_{i} c_i(k) \mathcal{O}_i[\phi,\bar{\phi}]$$
 where $S_{\text{kin},k}, S_{\text{int},k}, S_{\text{hol},k}$ are the running kinetic, interaction, and holographic measure terms (Eqs. 1.1-1.4) with scale-dependent couplings $\lambda_k, \gamma_k, \mu_k$. The additional operators $\mathcal{O}_i$ represent higher-order structures (e.g., $\phi^6$ interactions, higher-derivative kinetic terms, curvature terms) that are generated by the RG flow.
 
 The flow equations for the couplings $(\lambda_k, \gamma_k, \mu_k)$ are obtained by projecting the Wetterich equation onto the corresponding operators:
-$$
-\partial_t g_i(k) = \left\langle \frac{\delta \Gamma_k}{\delta g_i} \cdot \partial_t \Gamma_k \right\rangle
-$$
+$$\partial_t g_i(k) = \left\langle \frac{\delta \Gamma_k}{\delta g_i} \cdot \partial_t \Gamma_k \right\rangle$$
 This yields a coupled system of non-linear differential equations for the running couplings, including the $\beta$-functions for $\lambda, \gamma, \mu$ and for the coefficients $c_i(k)$ of the higher-order operators.
 
 ### B.3 Two-Loop Beta Functions and Proof of One-Loop Dominance (Analytical Proof,  Quaternionic Reformulation)
@@ -1494,21 +1354,15 @@ Specifically, the graviton is a composite operator built from the bilocal field 
 The graviton two-point function $\mathcal{G}_{\mu\nu\rho\sigma}(p)$ is obtained from the inverse of the kinetic term for the graviton in the effective action $\Gamma_*[g]$ (Eq. 2.14). This term arises from the second functional derivative of $\Gamma_k[g]$ with respect to the metric field $g_{\mu\nu}(x)$.
 
 1.  **Effective Graviton Action:** The full effective action for the emergent metric degrees of freedom at the fixed point can be written as:
-    $$
-    \Gamma_*[g] = \int d^4x \sqrt{-g} \left( \frac{1}{16\pi G_*} (R[g] - 2\Lambda_*) + \alpha_2 C_{\mu\nu\rho\sigma}C^{\mu\nu\rho\sigma} + \alpha_3 R^2 + \ldots \right)
-    $$
+$$\Gamma_*[g] = \int d^4x \sqrt{-g} \left( \frac{1}{16\pi G_*} (R[g] - 2\Lambda_*) + \alpha_2 C_{\mu\nu\rho\sigma}C^{\mu\nu\rho\sigma} + \alpha_3 R^2 + \ldots \right)$$
     where $C_{\mu\nu\rho\sigma}$ is the Weyl tensor and the ellipsis denotes higher-order curvature invariants. The coefficients $G_*, \Lambda_*, \alpha_2, \alpha_3, \ldots$ are the fixed-point values of their respective running couplings, computationally derived from the RG flow. All higher-curvature coefficients $\alpha_i$ are proven to vanish in the IR (Theorem 2.7).
 
 2.  **Propagator Calculation:** We perturb the metric $g_{\mu\nu}(x) = \bar{g}_{\mu\nu}(x) + h_{\mu\nu}(x)$ around a background metric $\bar{g}_{\mu\nu}$ (e.g., flat Minkowski space or de Sitter space). The quadratic term in $h_{\mu\nu}$ in the effective action $\Gamma_*[g]$ provides the inverse graviton propagator.
-    $$
-    \Gamma_*^{(2)}[h] = \frac{1}{2} \int d^4x\,d^4y\, h_{\mu\nu}(x) \mathcal{K}^{\mu\nu\rho\sigma}(x,y) h_{\rho\sigma}(y)
-    $$
+$$\Gamma_*^{(2)}[h] = \frac{1}{2} \int d^4x\,d^4y\, h_{\mu\nu}(x) \mathcal{K}^{\mu\nu\rho\sigma}(x,y) h_{\rho\sigma}(y)$$
     The graviton two-point function in momentum space is then $\mathcal{G}_{\mu\nu\rho\sigma}(p) = (\mathcal{K}^{\mu\nu\rho\sigma}(p))^{-1}$.
 
 3.  **Explicit Closed-Form Spectral Decomposition:** Utilizing the emergent fixed-point Laplacian and incorporating the QNCD phase weights from the cGFT condensate, the graviton propagator in momentum space is analytically derived as:
-    $$
-\boxed{ \mathcal{G}_{\mu\nu\rho\sigma}(p) = \frac{P^{(2)}_{\mu\nu\rho\sigma}}{Z_* (p^2 - M^2_g(p))} + \frac{P^{(0,s)}_{\mu\nu\rho\sigma}}{Z_*(p^2 - M^2_s(p))} + \text{gauge terms} }
-$$
+$$\boxed{ \mathcal{G}_{\mu\nu\rho\sigma}(p) = \frac{P^{(2)}_{\mu\nu\rho\sigma}}{Z_* (p^2 - M^2_g(p))} + \frac{P^{(0,s)}_{\mu\nu\rho\sigma}}{Z_*(p^2 - M^2_s(p))} + \text{gauge terms} }$$
     where $P^{(2)}$ and $P^{(0,s)}$ are the transverse-traceless spin-2 and spin-0 projector operators, respectively. $Z_* = (16\pi G_*)^{-1}$ is the fixed-point wave function renormalization. The momentum-dependent effective masses $M^2_g(p)$ and $M^2_s(p)$ incorporate the holographic measure term and QNCD phase weights, ensuring asymptotic safety. This provides a complete closed-form expression for the graviton propagator.
 
 ### C.3 Anomalous Dimension and $\Delta_{\text{grav}}(k)$ as a Topological Invariant (Analytical Proof)
@@ -1548,9 +1402,7 @@ The speed of light $c$ is a scale-dependent running coupling $c(k)$ that flows t
 **Proof:**
 The speed of light $c$ emerges from the Lorentzian signature of the emergent metric, which is dynamically generated by the spontaneous $\mathbb{Z}_2$ symmetry breaking of the $\mathrm{U}(1)_\phi$ condensate (Section 2.4.1). The scale of this symmetry breaking is set by the running vacuum expectation value (VEV) of the $\mathrm{U}(1)_\phi$ condensate, $v_{\mathrm{U}(1)}(k)$. Since $c$ is determined by the ratio of timelike to spacelike fluctuations in the emergent metric, and this ratio is directly influenced by $v_{\mathrm{U}(1)}(k)$, $c$ acquires a scale dependence.
 The exact derivation, detailed in **Appendix C.6.1**, involves analyzing the effective metric components derived from the condensate. The ratio of the timelike to spacelike components of the effective metric tensor, which defines $c(k)$, is found to be proportional to the running VEV of the $\mathrm{U}(1)_\phi$ field. This yields the functional form:
-$$
-\boxed{ c(k) = c_* \left(1 + \xi_c \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_c}\right) } \tag{C.1}
-$$
+$$\boxed{ c(k) = c_* \left(1 + \xi_c \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_c}\right) } \tag{C.1}$$
 where $c_*$ is the observed infrared value, $\ell_{\text{Pl}}^{-1}$ is the Planck scale cutoff, and $\xi_c$ and $\beta_c$ are analytically computable coefficients derived from the fixed-point couplings ($\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*$) and the properties of the $\mathrm{U}(1)_\phi$ condensate. This leads to energy-dependent photon velocities (Section 8.3), distinct from the cubic LIV term.
 
 ### C.7 Running Planck's Constant $\hbar(k)$ ( New Content)
@@ -1560,9 +1412,7 @@ Planck's constant $\hbar$ is a scale-dependent running coupling $\hbar(k)$ that 
 
 **Proof:**
 Planck's constant $\hbar$ is fundamentally related to the quantization of action. In IRH, the action is the Harmony Functional (Eq. 1.5). The running of $\hbar(k)$ arises from the scale-dependence of the fundamental quantum of action, which is tied to the effective volume of the group manifold and the QNCD metric. The derivation in **Appendix C.7.1** involves analyzing the effective action and its relation to the path integral measure. The effective quantum of action, which defines $\hbar(k)$, is found to be proportional to the running effective volume of the group manifold as perceived by the emergent degrees of freedom. This yields the functional form:
-$$
-\boxed{ \hbar(k) = \hbar_* \left(1 + \xi_\hbar \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_\hbar}\right) } \tag{C.2}
-$$
+$$\boxed{ \hbar(k) = \hbar_* \left(1 + \xi_\hbar \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_\hbar}\right) } \tag{C.2}$$
 where $\hbar_*$ is the observed infrared value, and $\xi_\hbar$ and $\beta_\hbar$ are analytically computable coefficients derived from the fixed-point couplings and the QNCD metric properties.
 
 ### C.8 Running Gravitational Constant $G(k)$ ( New Content)
@@ -1572,9 +1422,7 @@ Newton's gravitational constant $G$ is a scale-dependent running coupling $G(k)$
 
 **Proof:**
 The running of Newton's gravitational constant $G(k)$ is a well-known feature of asymptotically safe quantum gravity. In IRH, $G(k)$ is derived from the running effective action for gravity, $\Gamma_k[g]$. The coefficient of the Einstein-Hilbert term in $\Gamma_k[g]$ is $(16\pi G(k))^{-1}$. The RG flow of this coefficient is explicitly calculated from the Wetterich equation projected onto the Ricci scalar operator. The derivation in **Appendix C.8.1** confirms the functional form:
-$$
-\boxed{ G(k) = G_* \left(1 + \xi_G \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_G}\right) } \tag{C.3}
-$$
+$$\boxed{ G(k) = G_* \left(1 + \xi_G \left(\frac{k}{\ell_{\text{Pl}}^{-1}}\right)^{\beta_G}\right) } \tag{C.3}$$
 where $G_*$ is the observed infrared value, and $\xi_G$ and $\beta_G$ are analytically computable coefficients derived from the fixed-point couplings and the anomalous dimensions of the graviton.
 
 ---
@@ -1588,9 +1436,7 @@ where $G_*$ is the observed infrared value, and $\xi_G$ and $\beta_G$ are analyt
 2.  **Calculation of $\pi_1(M^3)$ and $H_1(M^3;\mathbb{Z})$:** The fundamental group $\pi_1(M^3)$ is calculated directly from the presentation of $M^3$ as a quotient space.
     *   **Group Presentation for $\pi_1(M^3)$:** The generators and relations for $\pi_1(M^3)$ are explicitly derived from the coherent condensation rules on $G_{\text{inf}}$, representing the distinct non-contractible loops in the quotient space.
     *   **Abelianization to $H_1(M^3;\mathbb{Z})$:** The first homology group $H_1(M^3;\mathbb{Z})$ is the abelianization of $\pi_1(M^3)$. Rigorous calculation (utilizing the specific group relations from the condensate) demonstrates:
-        $$
-        H_1(M^3;\mathbb{Z}) \cong \mathbb{Z}^8 \oplus \mathbb{Z}^3 \oplus \mathbb{Z}^1 \cong \mathbb{Z}^{12}
-        $$
+$$H_1(M^3;\mathbb{Z}) \cong \mathbb{Z}^8 \oplus \mathbb{Z}^3 \oplus \mathbb{Z}^1 \cong \mathbb{Z}^{12}$$
         Therefore, the first Betti number $\beta_1(M^3) = \text{rank}(H_1(M^3;\mathbb{Z}))$ is exactly 12.
 
 3.  **Isomorphism to Lie Algebra of $G_{\text{SM}}$:** The connection to gauge symmetries is established by identifying the independent 1-cycles in $M^3$ with the generators of the emergent gauge group. Loops in the base manifold $M^3$ correspond to holonomies of connection fields. The 12 independent cycles in $M^3$ induce a parallel transport operator whose action is isomorphic to the Lie algebra of $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$. The specific non-abelian nature of the $\mathrm{SU}(2)$ factors of $G_{\text{inf}}$ correctly gives rise to the non-abelian $\mathrm{SU}(3)$ and $\mathrm{SU}(2)$ components, while the $\mathrm{U}(1)_\phi$ factor yields the $\mathrm{U}(1)$ component.
@@ -1606,9 +1452,7 @@ The HarmonyOptimizer, by computationally constructing the discrete CRN from the 
 3.  **Instanton Equations:** We derive the field equations for $\phi(g_1,g_2,g_3,g_4)$ at the Cosmic Fixed Point. These are highly non-linear partial differential equations on $G_{\text{inf}}^4$. We look for solutions that represent localized excitations with finite energy, which are topologically charged. These "instanton-like" solutions are exact analogues of self-dual solutions in Yang-Mills theory or topological defects in condensed matter.
 
 4.  **Topological Charge Quantification:** The topological charge $Q$ for these VWP solutions is identified as a specific winding number (Pontryagin index or analogous topological invariant) for the field $\phi$ over specific cycles within $G_{\text{inf}}$. For the quaternionic field $\phi: G_{\text{inf}}^4 \to \mathbb{H}$, the winding number is rigorously defined through the induced map on the homotopy groups.
-    $$
-    Q = \int_{M^4} \text{Chern-Simons}(A_{\text{eff}}) + \text{Pontryagin}(\omega_{\text{eff}})
-    $$
+$$Q = \int_{M^4} \text{Chern-Simons}(A_{\text{eff}}) + \text{Pontryagin}(\omega_{\text{eff}})$$
     where $A_{\text{eff}}$ and $\omega_{\text{eff}}$ are emergent gauge and gravitational connection forms.
 
 5.  **Proof of Three Stable Generations:** Applying **Morse theory** to the effective potential for topological defects, we find that the fixed-point couplings $\tilde\lambda_*, \tilde\gamma_*, \tilde\mu_*$ restrict the possible stable configurations. The non-trivial balance between the kinetic, interaction, and holographic terms results in exactly three distinct, non-zero, stable topological charges for the VWP solutions. This is proven by demonstrating that the potential possesses **exactly three distinct, non-degenerate stable minima**, and no other stable solutions or continuous families of solutions exist.
@@ -1627,17 +1471,13 @@ The HarmonyOptimizer, by computationally constructing the discrete CRN from the 
 1.  **Effective Potential for Fermionic Defects:** Fermions are identified as stable Vortex Wave Patterns (VWPs), which are topological defects in the cGFT condensate (Appendix D.2). The fixed-point effective action $\Gamma_*[\phi]$ defines an effective potential $V_{\text{eff}}[\phi_{\text{defect}}]$ for these localized defect configurations. This potential depends on the topological properties of the defects.
 
 2.  **Topological Complexity Operator:** We define a topological complexity operator, $\mathcal{C}$, which, when acting on a VWP solution $\phi_{\text{defect}}$, extracts a topological invariant. This invariant is precisely the "minimal algorithmic complexity" of the associated defect line in the emergent 4-manifold, or a related winding number, which captures the non-triviality of the defect's structure.
-    $$
-    \mathcal{K}_f = \langle \phi_{\text{defect}}^{(f)} | \mathcal{C} | \phi_{\text{defect}}^{(f)} \rangle
-    $$
+$$\mathcal{K}_f = \langle \phi_{\text{defect}}^{(f)} | \mathcal{C} | \phi_{\text{defect}}^{(f)} \rangle$$
     where $\mathcal{C}$ is a gauge-invariant operator related to the linking number of the VWP.
 
 3.  **Variational Principle and Unique Minima:** The values of $\mathcal{K}_f$ are not arbitrary. They are determined by minimizing the fixed-point effective potential $V_{\text{eff}}[\phi_{\text{defect}}]$ subject to the topological constraints and the holographic measure term. The specific architecture of the cGFT action (particularly the QNCD-weighted kernel and holographic measure) leads to a highly constrained landscape of topological defects.
     *   Through rigorous Morse theory analysis and certified global search by the HarmonyOptimizer, it is proven that $V_{\text{eff}}[\phi_{\text{defect}}]$ possesses **exactly three distinct, stable, non-degenerate minima** in the space of topological defects. These minima correspond to the most energetically favorable and topologically stable configurations.
     *   The values of $\mathcal{K}_f$ are the **unique eigenvalues** obtained from solving the transcendental equations that define these minima, with realistic theoretical uncertainties:
-        $$
-        \mathcal{K}_1 = 1.000 \pm 0.001, \quad \mathcal{K}_2 = 206.77 \pm 0.02, \quad \mathcal{K}_3 = 3477.15 \pm 0.35
-        $$
+$$\mathcal{K}_1 = 1.000 \pm 0.001, \quad \mathcal{K}_2 = 206.77 \pm 0.02, \quad \mathcal{K}_3 = 3477.15 \pm 0.35$$
     The HarmonyOptimizer rigorously computes these minima, confirming these precise numerical values and their stability. The "integer-like" nature of $\mathcal{K}_f$ is an emergent quantization in the strongly coupled topological sector. **The HarmonyOptimizer's adaptive mesh refinement in the VWP solution space and higher-order variational calculations have been further enhanced to achieve these sub-percent theoretical uncertainties, especially critical for matching the precision of lighter fermion masses.**
 
 4.  **Mass Generation:** The Higgs field emerges as the order parameter of the condensate. Its vacuum expectation value (VEV) $v_*$ is derived from the minimum of the fixed-point effective potential for the condensate itself (Eq. 3.7). The fermion masses are then given by the interaction strength (Yukawa coupling) of the VWP with the Higgs VEV. The Yukawa coupling $y_f$ is found to be directly proportional to the topological complexity $\mathcal{K}_f$ of the corresponding VWP, as shown in Eq. 3.6. This provides a direct, analytically derived link between topological complexity and the fermion mass hierarchy.
@@ -1650,9 +1490,7 @@ The HarmonyOptimizer, by computationally constructing the discrete CRN from the 
     This misalignment is a consequence of the quaternionic-valued nature of the cGFT and its QNCD-weighted interactions.
 
 2.  **Overlap Integrals:** The mixing matrices are given by the overlap integrals between these two bases. For quarks (CKM matrix $V_{\text{CKM}}$) and leptons (PMNS matrix $U_{\text{PMNS}}$), the elements are:
-    $$
-    (V_{\text{CKM}})_{ij} = \langle \psi_{u_i}^{\text{mass}} | \psi_{d_j}^{\text{topology}} \rangle \quad \text{and} \quad (U_{\text{PMNS}})_{ij} = \langle \psi_{\nu_i}^{\text{mass}} | \psi_{e_j}^{\text{topology}} \rangle
-    $$
+$$(V_{\text{CKM}})_{ij} = \langle \psi_{u_i}^{\text{mass}} | \psi_{d_j}^{\text{topology}} \rangle \quad \text{and} \quad (U_{\text{PMNS}})_{ij} = \langle \psi_{\nu_i}^{\text{mass}} | \psi_{e_j}^{\text{topology}} \rangle$$
     where $\psi^{\text{mass}}$ are the mass eigenstates and $\psi^{\text{topology}}$ are the topological eigenstates (VWPs). These overlap integrals are computationally derived analytically from the fixed-point propagator and the derived VWP solutions. The specific structure of the QNCD metric (Appendix A) in the interaction kernel plays a critical role in determining these overlaps.
 
 3.  **CP Violation:** The presence of quaternionic phases in the cGFT (from the $\mathrm{U}(1)_\phi$ factor and the quaternionic kernel) naturally leads to CP-violating phases in the mixing matrices. The Jarlskog invariant, a measure of CP violation, is directly calculable from the phases in the fixed-point couplings and the overlap integrals.
@@ -1688,9 +1526,7 @@ The ratios of all fundamental couplings (electromagnetic, weak, and strong) are 
 
 **Proof:**
 By taking ratios of the dynamically generated $\mathrm{U}(1)$, $\mathrm{SU}(2)$, and $\mathrm{SU}(3)$ couplings, and accounting for their distinct emergence mechanisms from the $G_{\text{inf}}$ topology, it is analytically shown that all ratios are functions solely of the three fixed-point parameters and specific topological indices. For example, the ratio of weak to electromagnetic couplings is given by:
-$$
-\boxed{\frac{g_2^2}{e^2} = \frac{4\pi^2}{C_H (1 + \tilde{\mu}_*/48\pi^2)} \frac{f(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*)}{h(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*)} (1 \pm 0.01)}
-$$
+$$\boxed{\frac{g_2^2}{e^2} = \frac{4\pi^2}{C_H (1 + \tilde{\mu}_*/48\pi^2)} \frac{f(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*)}{h(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*)} (1 \pm 0.01)}$$
 where $f$ and $h$ are specific analytical functions derived from the cGFT fixed-point vertex functions. These ratios match experimental values within 1% theoretical uncertainty, providing a powerful internal consistency check for IRH.
 
 ### E.5 Algebraic Relations Discovery for Fermion Masses ( New Content)
@@ -1702,9 +1538,7 @@ The HarmonyOptimizer is employed to compute the $\mathcal{K}_f$ values to an unp
 
 **E.5.2 Algorithmic Pattern Recognition**
 A suite of advanced pattern recognition algorithms (e.g., PSLQ algorithm, integer relation algorithms) is applied to the high-precision $\mathcal{K}_f$ values, in conjunction with fundamental constants like $\alpha$, $\pi$, $e$, and ratios of fermion masses. The goal is to identify simple algebraic expressions that approximate or exactly match the computed $\mathcal{K}_f$ values. For example, investigating relations of the form:
-$$
-\mathcal{K}_f = A \left(\frac{2\pi^2}{\alpha}\right)^x \left(\frac{m_j}{m_k}\right)^y \dots
-$$
+$$\mathcal{K}_f = A \left(\frac{2\pi^2}{\alpha}\right)^x \left(\frac{m_j}{m_k}\right)^y \dots$$
 where $A, x, y$ are rational numbers or small integers.
 
 **E.5.3 Symmetry Identification**
@@ -1800,9 +1634,7 @@ This research program aims to uncover a deeper layer of mathematical necessity i
 
 The kinetic term:
 
-$$
-S_{\text{kin}} = \int \Bigl[\prod_{i=1}^4 dg_i\Bigr]\; \bar{\phi}(g_1,g_2,g_3,g_4)\; \Bigl(\sum_{a=1}^{3}\sum_{i=1}^{4} \Delta_a^{(i)}\Bigr)\, \phi(g_1,g_2,g_3,g_4)
-$$
+$$S_{\text{kin}} = \int \Bigl[\prod_{i=1}^4 dg_i\Bigr]\; \bar{\phi}(g_1,g_2,g_3,g_4)\; \Bigl(\sum_{a=1}^{3}\sum_{i=1}^{4} \Delta_a^{(i)}\Bigr)\, \phi(g_1,g_2,g_3,g_4)$$
 where $\Delta_a^{(i)}$ is the Laplace-Beltrami operator acting on the $\mathrm{SU}(2)$ factor of the $i$-th argument. On a non-commutative group manifold like $\mathrm{SU}(2)$, canonical momenta do not commute, leading to ambiguities when defining products of operators (e.g., $p^2 = pp$). The Laplace-Beltrami operator itself is already defined via the Casimir operator, which is inherently unique for a given Lie group, and thus its sum $\sum \Delta_a^{(i)}$ is unambiguous in its definition.
 
 The ambiguity, if it were to arise, would typically appear when composing such operators or defining products with other fields, where field products or their derivatives might require a specific ordering (e.g., in a scalar field theory, a term like $g^{\mu\nu} \phi (\partial_\mu \partial_\nu \phi)$ might not be unique in curved space).
@@ -1890,13 +1722,9 @@ A conscious observer is modeled as a complex, self-referential Vortex Wave Patte
 3.  **Information Storage:** The acquired information configures the internal degrees of freedom of the observer's VWP.
 
 Each of these steps has an associated entropic cost. In IRH, entropy is fundamentally algorithmic complexity. The change in algorithmic entropy of the observer ($\Delta S_{\text{obs}}$) is proportional to the acquired information ($\Delta I$) and the observer's complexity:
-$$
-\Delta S_{\text{obs}} = k_B \ln 2 \cdot \Delta I \cdot \mathcal{C}(\text{observer}) \tag{I.1}
-$$
+$$\Delta S_{\text{obs}} = k_B \ln 2 \cdot \Delta I \cdot \mathcal{C}(\text{observer}) \tag{I.1}$$
 By the second law of thermodynamics, this entropic change implies an energetic cost. Due to energy conservation in the total system (system + observer + environment), this cost manifests as a back-reaction on the observed system:
-$$
-\Delta E_{\text{system}} = -T_{\text{eff}} \Delta S_{\text{obs}} \tag{I.2}
-$$
+$$\Delta E_{\text{system}} = -T_{\text{eff}} \Delta S_{\text{obs}} \tag{I.2}$$
 where $T_{\text{eff}}$ is the effective temperature of the cGFT condensate. This framework predicts that more complex observers induce larger back-reactions. For a macroscopic observer ($\mathcal{C} \sim 10^{14}$) measuring a single qubit ($\Delta I = 1$ bit), $\Delta E_{\text{system}} \sim 10^{10}$ eV, which is potentially measurable in precision quantum experiments. This provides the **first quantitative prediction** of observer effects in quantum mechanics, moving beyond purely epistemic interpretations.
 
 ---
@@ -1910,9 +1738,7 @@ The Lorentz Invariance Violation (LIV) parameter $\xi$ (Eq. 2.24) is not a unive
 
 **Proof:**
 The LIV arises from the residual granularity of spacetime at the Planck scale, stemming from the discrete nature of the QNCD metric. Fermions, being topological defects, interact with this granularity in a manner dependent on their intrinsic topological structure, quantified by $\mathcal{K}_f$. The derivation involves a precise calculation of the effective action for each fermion type, considering its specific interaction with the discrete spacetime structure. The momentum-dependent terms in the effective action, which lead to LIV, acquire a $\mathcal{K}_f$-dependent coefficient. Specifically, the LIV coefficient $\xi_f$ for a fermion of type $f$ is given by:
-$$
-\boxed{\xi_f = \xi \left(1 + \beta_1 \frac{\mathcal{K}_f}{\mathcal{K}_{\text{ref}}} \left(\frac{E}{\ell_{\text{Pl}}}\right)^{\beta_2} \right)}
-$$
+$$\boxed{\xi_f = \xi \left(1 + \beta_1 \frac{\mathcal{K}_f}{\mathcal{K}_{\text{ref}}} \left(\frac{E}{\ell_{\text{Pl}}}\right)^{\beta_2} \right)}$$
 where $\xi$ is the universal LIV parameter (Eq. 2.26), $\mathcal{K}_{\text{ref}}$ is a reference topological complexity (e.g., for the electron), and $\beta_1, \beta_2$ are analytically derived coefficients from the fixed-point couplings and spectral properties of the condensate. This predicts that higher-mass (more complex) fermions will exhibit measurable LIV effects at slightly lower energies than lighter ones than previously thought, due to their enhanced interaction with the underlying discrete spacetime structure. This provides a direct, highly falsifiable prediction for future lepton collider experiments probing high-energy dispersion relations across different lepton flavors.
 
 ### J.2 Gravitational Wave Sidebands from Recursive Vortex Wave Patterns (Analytical Derivation)
@@ -1922,9 +1748,7 @@ Recursive Vortex Wave Patterns (VWPs) formed near compact astrophysical objects 
 
 **Proof:**
 Near extreme astrophysical objects, the high curvature and energy densities cause the cGFT condensate to form highly ordered, recursive VWP structures (akin to crystallizing defects in a fluid). These recursive patterns are analytically shown to possess distinct, quantized energy levels, leading to specific spectral gaps in the excitation spectrum of the condensate. These spectral gaps, in turn, influence the local propagation of emergent gravitons. The interaction of the propagating gravitational wave (a collective excitation of the metric) with these stable, recursive VWPs induces modulated oscillations, leading to the emission of phase-coherent sidebands. The precise analytical relation between the sideband spacing $\Delta \omega$ and the local spectral gap $\Delta_{\text{spec}}$ is given by:
-$$
-\boxed{\Delta \omega = \frac{1}{\ell_0} \sqrt{\frac{\Delta_{\text{spec}}}{\tilde{\lambda}_* \tilde{\gamma}_*}} \left(1 - \zeta \frac{M_{\text{obj}}}{R_{\text{eff}}} \right)}
-$$
+$$\boxed{\Delta \omega = \frac{1}{\ell_0} \sqrt{\frac{\Delta_{\text{spec}}}{\tilde{\lambda}_* \tilde{\gamma}_*}} \left(1 - \zeta \frac{M_{\text{obj}}}{R_{\text{eff}}} \right)}$$
 where $\ell_0$ is the Planck length, $\Delta_{\text{spec}}$ is the local spectral gap (a function of the energy density and topology of the recursive VWP), and $\zeta$ is an analytically derived coupling constant. This prediction suggests that gravitational wave spectroscopy (from LISA, Cosmic Explorer, or Einstein Telescope) could probe the microscopic structure of spacetime by detecting these sidebands. The sideband spacing will be unique for different astrophysical environments and directly linked to the properties of the underlying cGFT condensate.
 
 ### J.3 Muon $g-2$ Anomaly ( New Content)
@@ -1939,9 +1763,7 @@ The anomalous magnetic moment of the muon arises from quantum loop corrections. 
 3.  **Topological Defects:** The interaction of the muon (as a VWP) with the background cGFT condensate, particularly near the Planck scale, generates novel loop diagrams not present in the Standard Model.
 
 The full calculation, detailed in **Appendix J.3.1**, yields:
-$$
-\boxed{\Delta(g-2)_\mu^{\text{IRH}} = 251 \pm 50 \times 10^{-11}} \tag{J.1}
-$$
+$$\boxed{\Delta(g-2)_\mu^{\text{IRH}} = 251 \pm 50 \times 10^{-11}} \tag{J.1}$$
 This value is consistent with the current experimental measurement of the anomaly and resolves the discrepancy with the Standard Model prediction. This prediction will be refined as the algebraic relations for fermion masses (Appendix E.5) are further developed.
 
 ### J.4 Higgs Trilinear Coupling $\lambda_{HHH}$ ( New Content)
@@ -1952,9 +1774,7 @@ IRH  predicts the Higgs trilinear self-coupling $\lambda_{HHH}$ with a precision
 **Derivation:**
 The Higgs trilinear coupling is a fundamental parameter of the Standard Model Higgs potential, directly related to the shape of the potential that gives mass to elementary particles. In IRH, the Higgs field emerges as the order parameter of the cGFT condensate (Section 3.3.2). The Higgs potential, and thus its self-couplings, are derived from the fixed-point effective potential of the cGFT. The value of $\lambda_{HHH}$ is directly related to the fixed-point couplings $\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*$ and the emergent Higgs VEV $v_*$.
 The calculation, detailed in **Appendix J.4.1**, involves computing the third functional derivative of the effective action with respect to the Higgs field. This yields:
-$$
-\boxed{\lambda_{HHH} = \frac{3 m_H^2}{v_*} \left(1 + \delta_{HHH}(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*)\right) \approx 125.25 \pm 1.25\;\text{GeV}} \tag{J.2}
-$$
+$$\boxed{\lambda_{HHH} = \frac{3 m_H^2}{v_*} \left(1 + \delta_{HHH}(\tilde{\lambda}_*, \tilde{\gamma}_*, \tilde{\mu}_*)\right) \approx 125.25 \pm 1.25\;\text{GeV}} \tag{J.2}$$
 where $\delta_{HHH}$ is a small correction term arising from higher-order cGFT condensate fluctuations, analytically computable from the fixed-point parameters. This prediction will be testable at future colliders like the FCC.
 
 ---
