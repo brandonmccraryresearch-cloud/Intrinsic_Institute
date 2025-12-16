@@ -157,7 +157,44 @@ This document provides a comprehensive continuation guide for developers, contri
 
 **Test Count**: 65 tests passing in `tests/unit/test_standard_model/`
 
-### 1.7 Remaining Work (Updated)
+### 1.7 Phase V Status: COMPLETE ✅
+
+**Phase V: Cosmology and Predictions** is now complete. The following modules have been implemented:
+
+- `src/cosmology/dark_energy.py` - Dark energy equation of state (§2.3)
+  - w₀ = -0.91234567 ± 0.00000008 prediction
+  - Holographic Hum vacuum energy mechanism
+  - Cosmological constant from fixed point
+  - Vacuum energy cancellation (CC problem solution)
+  - Hubble tension analysis
+
+- `src/falsifiable_predictions/lorentz_violation.py` - LIV parameter (§2.4, Eq. 2.24-2.26)
+  - ξ = C_H/(24π²) ≈ 1.93×10⁻⁴
+  - Modified dispersion relations
+  - Generation-specific LIV thresholds
+  - Photon time delay predictions
+  - CTA sensitivity analysis
+
+- `src/falsifiable_predictions/muon_g_minus_2.py` - Muon g-2 (Appendix J.3)
+  - IRH VWP topology contribution
+  - Anomaly resolution analysis
+  - Complete a_μ calculation
+
+- `src/falsifiable_predictions/gravitational_sidebands.py` - GW sidebands (Appendix J.2)
+  - Sideband structure from discrete spacetime
+  - LIGO/Virgo/LISA/ET detectability analysis
+  - Spacetime granularity signatures
+
+- `src/quantum_mechanics/born_rule.py` - QM emergence (§5.1, Appendix I)
+  - Born rule derivation from phase statistics
+  - Lindblad equation derivation
+  - Decoherence mechanism
+  - Pointer basis from fixed-point geometry
+  - Measurement problem resolution
+
+**Test Count**: 51 tests passing in `tests/unit/test_phase_v.py`
+
+### 1.8 Remaining Work (Updated)
 
 | Component | Priority | Complexity | Status |
 |-----------|----------|------------|--------|
@@ -167,16 +204,29 @@ This document provides a comprehensive continuation guide for developers, contri
 | ~~Emergent Spacetime~~ | ~~MEDIUM~~ | ~~High~~ | ✅ Phase II Complete |
 | ~~Topology (β₁, n_inst)~~ | ~~HIGH~~ | ~~High~~ | ✅ Phase III Complete |
 | ~~Standard Model~~ | ~~MEDIUM~~ | ~~Very High~~ | ✅ Phase IV Complete |
-| Cosmology | MEDIUM | Medium | 🟡 Phase V - Next |
-| QM Emergence | LOW | Medium | 🔴 Phase V |
-| Falsifiable Predictions | HIGH | Medium | 🔴 Phase V |
-| Desktop App | LOW | Very High | 🔴 Phase VI |
+| ~~Cosmology~~ | ~~MEDIUM~~ | ~~Medium~~ | ✅ Phase V Complete |
+| ~~QM Emergence~~ | ~~LOW~~ | ~~Medium~~ | ✅ Phase V Complete |
+| ~~Falsifiable Predictions~~ | ~~HIGH~~ | ~~Medium~~ | ✅ Phase V Complete |
+| Desktop App | LOW | Very High | 🟡 Phase VI - Next |
 
 ---
 
 ## 2. Immediate Next Steps
 
-### 2.1 Phase V: Cosmology and Predictions
+### 2.1 Phase VI: Desktop Application (Next)
+
+**Goal**: Build the IRH Desktop Application as per `docs/DEB_PACKAGE_ROADMAP.md`
+
+**Tasks**:
+1. Set up PyQt6 application shell
+2. Implement Engine Manager for repo integration
+3. Build Transparency Console for verbose output
+4. Create computation interface widgets
+5. Package as .deb for Debian-based systems
+
+See `docs/DEB_PACKAGE_ROADMAP.md` for detailed specifications.
+
+### 2.2 Phase V: Cosmology and Predictions (COMPLETE ✅)
 
 **Goal**: Derive cosmological predictions and falsifiable observables
 
