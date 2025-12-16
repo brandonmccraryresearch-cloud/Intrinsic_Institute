@@ -1,14 +1,15 @@
 
 
 # Intrinsic Resonance Holography: The Unified Theory of Emergent Reality 
-### Analytically Verified Unification of QM, GR, and the Standard Model with Full Ontological and Mathematical Closure, and Rigorously Bounded Precision
-**v21***
+### Analytically Verified Unification of QM, GR, and the Standard Model
 
 **Author:** Brandon D. McCrary  
 *Independent Theoretical Physics Researcher*
 
 **OCRID:** [https://orcid.org/0009-0008-2804-7165](https://orcid.org/0009-0008-2804-7165)
+
 **GitHub:** [https://github.com/brandonmccraryresearch-cloud/Intrinsic_Resonace_Holography-.git](https://github.com/brandonmccraryresearch-cloud/Intrinsic_Resonace_Holography-.git)
+
 **Date:** December 3, 2026
 
 ------
