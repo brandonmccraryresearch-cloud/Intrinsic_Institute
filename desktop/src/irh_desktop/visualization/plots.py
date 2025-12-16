@@ -20,13 +20,19 @@ import logging
 from dataclasses import dataclass, field
 from typing import List, Dict, Any, Optional, Tuple, Union
 import numpy as np
+import os
 
 logger = logging.getLogger(__name__)
 
 # Try to import matplotlib
 try:
     import matplotlib
-    matplotlib.use('Agg')  # Use non-interactive backend by default
+    # Only set backend if not already set or if no display available
+    # This prevents interfering with GUI applications
+    if os.environ.get('MPLBACKEND') is None:
+        # Check if we're in a headless environment
+        if os.environ.get('DISPLAY') is None and os.environ.get('WAYLAND_DISPLAY') is None:
+            matplotlib.use('Agg')  # Use non-interactive backend
     import matplotlib.pyplot as plt
     from matplotlib.figure import Figure
     from matplotlib.axes import Axes
