@@ -1,6 +1,6 @@
-# IRH v21.0 Continuation Guide: Next Phases
+# IRH v21.1 Continuation Guide: Next Phases
 
-**Project**: Intrinsic Resonance Holography v21.0 Computational Framework  
+**Project**: Intrinsic Resonance Holography v21.1 Computational Framework  
 **Document Version**: 1.0  
 **Status**: Active Development  
 **Last Updated**: December 2025
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-This document provides a comprehensive continuation guide for developers, contributors, and AI agents working on the IRH v21.0 computational framework. It outlines the remaining implementation phases, prioritized tasks, and detailed instructions for completing the theoretical-to-computational instantiation.
+This document provides a comprehensive continuation guide for developers, contributors, and AI agents working on the IRH v21.1 computational framework. It outlines the remaining implementation phases, prioritized tasks, and detailed instructions for completing the theoretical-to-computational instantiation.
 
 ---
 
@@ -743,7 +743,7 @@ src/falsifiable_predictions/
 """
 Beta Functions for cGFT RG Flow
 
-THEORETICAL FOUNDATION: IRH21.md §1.2.2, Eq. 1.13
+THEORETICAL FOUNDATION: Intrinsic_Resonance_Holography-v21.1.md §1.2.2, Eq. 1.13
 
 Implements the exact one-loop β-functions:
     β_λ = -2λ̃ + (9/8π²)λ̃²
@@ -761,7 +761,7 @@ class BetaFunctions:
     One-loop β-functions for the cGFT couplings.
     
     Theoretical Reference:
-        IRH21.md §1.2.2, Eq. 1.13
+        Intrinsic_Resonance_Holography-v21.1.md §1.2.2, Eq. 1.13
     """
     
     def beta_lambda(self, lambda_t: float, gamma_t: float = None, mu_t: float = None) -> float:
@@ -822,7 +822,7 @@ class BetaFunctions:
 """
 Cosmic Fixed Point Computation
 
-THEORETICAL FOUNDATION: IRH21.md §1.2.3, Eq. 1.14
+THEORETICAL FOUNDATION: Intrinsic_Resonance_Holography-v21.1.md §1.2.3, Eq. 1.14
 
 Fixed-point values:
     λ̃* = 48π²/9 ≈ 52.637
@@ -844,7 +844,7 @@ class CosmicFixedPoint:
     The unique non-Gaussian infrared fixed point.
     
     Theoretical Reference:
-        IRH21.md §1.2.3, Eq. 1.14
+        Intrinsic_Resonance_Holography-v21.1.md §1.2.3, Eq. 1.14
     """
     lambda_star: float
     gamma_star: float
@@ -899,7 +899,7 @@ def find_fixed_point(method: str = 'analytical') -> CosmicFixedPoint:
 """
 Fine-Structure Constant Derivation
 
-THEORETICAL FOUNDATION: IRH21.md §3.2.1-3.2.2, Eq. 3.4-3.5
+THEORETICAL FOUNDATION: Intrinsic_Resonance_Holography-v21.1.md §3.2.1-3.2.2, Eq. 3.4-3.5
 
 Target: α⁻¹ = 137.035999084(1)
 """
@@ -914,7 +914,7 @@ def compute_fine_structure_constant(
     Compute α⁻¹ from the Cosmic Fixed Point.
     
     Theoretical Reference:
-        IRH21.md §3.2.2, Eq. 3.4-3.5
+        Intrinsic_Resonance_Holography-v21.1.md §3.2.2, Eq. 3.4-3.5
         
     Returns
     -------
@@ -927,12 +927,12 @@ def compute_fine_structure_constant(
     # Implementation of Eq. 3.4-3.5
     # α⁻¹ = f(λ̃*, γ̃*, μ̃*, C_H, topological terms)
     
-    # TODO: Implement full derivation per IRH21.md §3.2
+    # TODO: Implement full derivation per Intrinsic_Resonance_Holography-v21.1.md §3.2
     
     return {
         'alpha_inverse': 137.035999084,
         'uncertainty': 1e-9,
-        'theoretical_reference': 'IRH21.md §3.2.2, Eq. 3.4-3.5',
+        'theoretical_reference': 'Intrinsic_Resonance_Holography-v21.1.md §3.2.2, Eq. 3.4-3.5',
         'status': 'analytical_prediction'
     }
 ```
@@ -980,7 +980,7 @@ from src.rg_flow.fixed_points import (
 from src.rg_flow.beta_functions import BetaFunctions
 
 class TestCosmicFixedPoint:
-    """Tests for Cosmic Fixed Point (IRH21.md §1.2.3, Eq. 1.14)."""
+    """Tests for Cosmic Fixed Point (Intrinsic_Resonance_Holography-v21.1.md §1.2.3, Eq. 1.14)."""
     
     def test_analytical_fixed_point_values(self):
         """Verify analytical fixed-point values match Eq. 1.14."""
@@ -1036,7 +1036,7 @@ def example_function(param1: float, param2: int) -> dict:
     Brief description of function.
     
     Theoretical Reference:
-        IRH21.md §X.Y.Z, Eq. N.M
+        Intrinsic_Resonance_Holography-v21.1.md §X.Y.Z, Eq. N.M
         
     Mathematical Foundation:
         Describe the mathematics being implemented.
@@ -1065,7 +1065,7 @@ def example_function(param1: float, param2: int) -> dict:
     
     References
     ----------
-    .. [1] IRH21.md §X.Y.Z
+    .. [1] Intrinsic_Resonance_Holography-v21.1.md §X.Y.Z
     """
 ```
 
@@ -1097,7 +1097,7 @@ See [`docs/DEB_PACKAGE_ROADMAP.md`](./DEB_PACKAGE_ROADMAP.md) for complete detai
 
 ### 9.1 Before Each Commit
 
-- [ ] All new functions have docstrings with IRH21.md references
+- [ ] All new functions have docstrings with Intrinsic_Resonance_Holography-v21.1.md references
 - [ ] Type hints on all function signatures
 - [ ] Unit tests written and passing
 - [ ] Code formatted with `black`
@@ -1116,7 +1116,7 @@ See [`docs/DEB_PACKAGE_ROADMAP.md`](./DEB_PACKAGE_ROADMAP.md) for complete detai
 
 ### 9.3 Theoretical Verification
 
-- [ ] Equation implementation matches IRH21.md exactly
+- [ ] Equation implementation matches Intrinsic_Resonance_Holography-v21.1.md exactly
 - [ ] Numerical values match certified precision
 - [ ] Gauge invariance tests pass
 - [ ] Convergence studies completed
@@ -1130,7 +1130,7 @@ See [`docs/DEB_PACKAGE_ROADMAP.md`](./DEB_PACKAGE_ROADMAP.md) for complete detai
 
 | Document | Location | Purpose |
 |----------|----------|---------|
-| IRH21.md | `/IRH21.md` | Master theoretical reference |
+| Intrinsic_Resonance_Holography-v21.1.md | `/Intrinsic_Resonance_Holography-v21.1.md` | Master theoretical reference |
 | Technical Reference | `/docs/TECHNICAL_REFERENCE.md` | Implementation specs |
 | Architecture | `/docs/architectural_overview.md` | System design |
 | Correspondence Map | `/THEORETICAL_CORRESPONDENCE.md` | Code↔Theory mapping |
@@ -1187,7 +1187,7 @@ pytest tests/ -v
 ### A.2 Making Your First Contribution
 
 1. **Pick a task** from Priority Queue (Section 4)
-2. **Read the relevant IRH21.md section**
+2. **Read the relevant Intrinsic_Resonance_Holography-v21.1.md section**
 3. **Create the module** with proper docstrings
 4. **Write tests** following the template (Section 6.3)
 5. **Run quality checks** (Section 9.1)
@@ -1196,7 +1196,7 @@ pytest tests/ -v
 ### A.3 Getting Help
 
 - **Issues**: GitHub issue tracker
-- **Theory Questions**: Consult IRH21.md
+- **Theory Questions**: Consult Intrinsic_Resonance_Holography-v21.1.md
 - **Implementation Questions**: See existing modules as examples
 
 ---

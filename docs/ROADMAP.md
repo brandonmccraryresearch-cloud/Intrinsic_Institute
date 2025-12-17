@@ -1,4 +1,4 @@
-# IRH v21.0 Development Roadmap
+# IRH v21.1 Development Roadmap
 
 **Version**: 1.1  
 **Status**: Active Planning  
@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-This roadmap outlines planned features and enhancements for the Intrinsic Resonance Holography (IRH) v21.0 computational framework. The Enhancement Phase (Visualization, Reporting, Logging) has been completed. Focus areas moving forward include performance optimization, interactive notebooks, web interface, and ML integration.
+This roadmap outlines planned features and enhancements for the Intrinsic Resonance Holography (IRH) v21.1 computational framework. The Enhancement Phase (Visualization, Reporting, Logging) has been completed. Focus areas moving forward include performance optimization, interactive notebooks, web interface, and ML integration.
 
 ---
 
@@ -112,7 +112,7 @@ src/visualization/
 
 1. **LaTeX Report Generator**
    - Automatic compilation of computation results
-   - Includes theoretical references (IRH21.md citations)
+   - Includes theoretical references (Intrinsic_Resonance_Holography-v21.1.md citations)
    - Equation rendering with SymPy
    - Figure inclusion from visualization module
 
@@ -492,7 +492,7 @@ webapp/
 
 - Follow PEP 8 style guide
 - Use type hints for all functions
-- Docstrings with IRH21.md references
+- Docstrings with Intrinsic_Resonance_Holography-v21.1.md references
 - Minimum 90% test coverage for new code
 - Performance benchmarks for optimization work
 
@@ -514,7 +514,7 @@ webapp/
 Why is this feature needed? What problem does it solve?
 
 ### Theoretical Foundation
-IRH21.md sections relevant to this feature.
+Intrinsic_Resonance_Holography-v21.1.md sections relevant to this feature.
 
 ### Design
 High-level architecture and API design.
@@ -635,7 +635,7 @@ We welcome community input on feature prioritization and new ideas.
 - [`CONTINUATION_GUIDE.md`](./CONTINUATION_GUIDE.md) - Phase-by-phase implementation guide
 - [`DEB_PACKAGE_ROADMAP.md`](./DEB_PACKAGE_ROADMAP.md) - Desktop application roadmap
 - [`CONTRIBUTING.md`](../CONTRIBUTING.md) - Contribution guidelines
-- [`IRH21.md`](../IRH21.md) - Canonical theoretical manuscript
+- [`Intrinsic_Resonance_Holography-v21.1.md`](../Intrinsic_Resonance_Holography-v21.1.md) - Canonical theoretical manuscript
 
 ---
 
