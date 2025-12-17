@@ -14,8 +14,10 @@ Components:
 - MetadataManager: Reproducibility tracking
 
 Theoretical Reference:
-    IRH v21.1 Manuscript - Final Compliance Checklist
-    "All outputs must conform to IRH-DEF standard format"
+    IRH v21.1 Manuscript (Part 1: Sections 1-4, Part 2: Sections 5-8 + Appendices)
+    - Intrinsic_Resonance_Holography-v21.1-Part1.md
+    - Intrinsic_Resonance_Holography-v21.1-Part2.md
+    Final Compliance Checklist: "All outputs must conform to IRH-DEF standard format"
 """
 
 from dataclasses import dataclass, field
