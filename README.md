@@ -478,7 +478,8 @@ This project is licensed under the **GNU General Public License v3.0**. See [`LI
 - **Author**: Brandon D. McCrary
 - **ORCID**: [0009-0008-2804-7165](https://orcid.org/0009-0008-2804-7165)
 - **GitHub**: [@brandonmccraryresearch-cloud](https://github.com/brandonmccraryresearch-cloud)
-
+- **Email**: [brandandonmccrary.research@gmail.com](brandandonmccrary.research@gmail.com)
+- **Text**: 903-884-8594
 ---
 
 ## 🎓 Acknowledgments
