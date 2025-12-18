@@ -61,6 +61,7 @@ __all__ = [
     'get_gpu_info',
     'get_available_backends',
     'set_default_backend',
+    'benchmark_gpu_performance',
 ]
 
 # =============================================================================
@@ -385,16 +386,41 @@ class GPUContext:
 # GPU-Accelerated Beta Functions (Eq. 1.13)
 # =============================================================================
 
+def _compute_beta_functions_generic(xp, lambda_t, gamma_t, mu_t):
+    """
+    Generic beta function computation using any array module.
+    
+    Parameters
+    ----------
+    xp : module
+        Array module (numpy, jax.numpy, or cupy)
+    lambda_t, gamma_t, mu_t : array-like
+        Coupling values
+        
+    Returns
+    -------
+    tuple
+        (beta_lambda, beta_gamma, beta_mu)
+        
+    Theoretical Reference:
+        IRH v21.1 Manuscript §1.2.2, Eq. 1.13
+    """
+    # β_λ = -2λ̃ + (9/8π²)λ̃²
+    beta_lambda = -2 * lambda_t + (9 / (8 * xp.pi**2)) * lambda_t**2
+    # β_γ = (3/4π²)λ̃γ̃
+    beta_gamma = (3 / (4 * xp.pi**2)) * lambda_t * gamma_t
+    # β_μ = 2μ̃ + (1/2π²)λ̃μ̃
+    beta_mu = 2 * mu_t + (1 / (2 * xp.pi**2)) * lambda_t * mu_t
+    return beta_lambda, beta_gamma, beta_mu
+
+
 def _beta_functions_numpy(
     lambda_t: NDArray[np.float64],
     gamma_t: NDArray[np.float64],
     mu_t: NDArray[np.float64],
 ) -> Tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]:
     """NumPy implementation of beta functions."""
-    beta_lambda = -2 * lambda_t + (9 / (8 * np.pi**2)) * lambda_t**2
-    beta_gamma = (3 / (4 * np.pi**2)) * lambda_t * gamma_t
-    beta_mu = 2 * mu_t + (1 / (2 * np.pi**2)) * lambda_t * mu_t
-    return beta_lambda, beta_gamma, beta_mu
+    return _compute_beta_functions_generic(np, lambda_t, gamma_t, mu_t)
 
 
 if _JAX_AVAILABLE:
@@ -480,10 +506,10 @@ def gpu_beta_functions(
         gamma_d = ctx.to_device(gamma_t)
         mu_d = ctx.to_device(mu_t)
         
-        # Compute on GPU
-        beta_lambda = -2 * lambda_d + (9 / (8 * cp.pi**2)) * lambda_d**2
-        beta_gamma = (3 / (4 * cp.pi**2)) * lambda_d * gamma_d
-        beta_mu = 2 * mu_d + (1 / (2 * cp.pi**2)) * lambda_d * mu_d
+        # Compute on GPU using generic function
+        beta_lambda, beta_gamma, beta_mu = _compute_beta_functions_generic(
+            cp, lambda_d, gamma_d, mu_d
+        )
         
         # Transfer back
         beta_lambda = ctx.to_host(beta_lambda)
@@ -657,32 +683,26 @@ def gpu_rg_flow_integration(
         couplings_d = ctx.to_device(couplings)
         
         for i in range(n_steps):
-            # Manual RK4 on GPU
+            # RK4 on GPU using generic beta functions
             lambda_t, gamma_t, mu_t = couplings_d[0], couplings_d[1], couplings_d[2]
             
             # k1
-            k1_l = -2 * lambda_t + (9 / (8 * cp.pi**2)) * lambda_t**2
-            k1_g = (3 / (4 * cp.pi**2)) * lambda_t * gamma_t
-            k1_m = 2 * mu_t + (1 / (2 * cp.pi**2)) * lambda_t * mu_t
+            k1_l, k1_g, k1_m = _compute_beta_functions_generic(cp, lambda_t, gamma_t, mu_t)
             k1 = cp.array([k1_l, k1_g, k1_m])
             
-            # k2-k4 (abbreviated for readability)
+            # k2
             mid1 = couplings_d + 0.5 * dt * k1
-            k2_l = -2 * mid1[0] + (9 / (8 * cp.pi**2)) * mid1[0]**2
-            k2_g = (3 / (4 * cp.pi**2)) * mid1[0] * mid1[1]
-            k2_m = 2 * mid1[2] + (1 / (2 * cp.pi**2)) * mid1[0] * mid1[2]
+            k2_l, k2_g, k2_m = _compute_beta_functions_generic(cp, mid1[0], mid1[1], mid1[2])
             k2 = cp.array([k2_l, k2_g, k2_m])
             
+            # k3
             mid2 = couplings_d + 0.5 * dt * k2
-            k3_l = -2 * mid2[0] + (9 / (8 * cp.pi**2)) * mid2[0]**2
-            k3_g = (3 / (4 * cp.pi**2)) * mid2[0] * mid2[1]
-            k3_m = 2 * mid2[2] + (1 / (2 * cp.pi**2)) * mid2[0] * mid2[2]
+            k3_l, k3_g, k3_m = _compute_beta_functions_generic(cp, mid2[0], mid2[1], mid2[2])
             k3 = cp.array([k3_l, k3_g, k3_m])
             
+            # k4
             end = couplings_d + dt * k3
-            k4_l = -2 * end[0] + (9 / (8 * cp.pi**2)) * end[0]**2
-            k4_g = (3 / (4 * cp.pi**2)) * end[0] * end[1]
-            k4_m = 2 * end[2] + (1 / (2 * cp.pi**2)) * end[0] * end[2]
+            k4_l, k4_g, k4_m = _compute_beta_functions_generic(cp, end[0], end[1], end[2])
             k4 = cp.array([k4_l, k4_g, k4_m])
             
             couplings_d = couplings_d + (dt / 6) * (k1 + 2*k2 + 2*k3 + k4)
