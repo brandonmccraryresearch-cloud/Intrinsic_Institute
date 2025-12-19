@@ -738,19 +738,20 @@ Every contribution to the IRH codebase must satisfy:
 
 ## Addendum: Fast operational checklist (v18-first)
 
-- **What this repo is**: IRH research code; active Python package in `python/src/irh` (v16–v18 complete), legacy `src/` + `.wl` in root, webapp in `webapp/`, docs in `docs/`.
+- **What this repo is**: IRH research code; active Python package in `python/src/irh` (v16–v18 complete), main v21 src in `src/`, webapp in `webapp/`, docs in `docs/`.
 - **Bootstrap (validated)**: `python -m pip install -e .[dev]` (Python 3.11/3.12). Set PYTHONPATH: in `python/` use `export PYTHONPATH=$(pwd)/src`; in repo root use `export PYTHONPATH=$PWD` for legacy/tests.
 - **Tests**:  
   - **v18 (143 tests)**: `cd python && export PYTHONPATH=$(pwd)/src && pytest tests/v18/ -v` (passes ~0.8s)
   - v16: `cd python && export PYTHONPATH=$(pwd)/src && pytest tests/v16/ -v`
-  - Legacy: `cd /home/runner/work/Intrinsic-Resonance-Holography-/Intrinsic-Resonance-Holography- && export PYTHONPATH=$PWD && pytest tests/test_v16_core.py`
+  - **v21 unit tests**: `cd /repo && export PYTHONPATH=$PWD && pytest tests/unit/ -v` (941+ tests)
+  - **Web API tests**: `cd /repo && export PYTHONPATH=$PWD && pytest webapp/backend/tests/ -v` (13 tests)
 - **Lint/type/build**:  
   - `cd python && export PYTHONPATH=$(pwd)/src && ruff check src/`  
   - `black --check src/ tests/ --line-length 100` (within `python/`)  
   - `mypy src/irh/ --ignore-missing-imports`  
   - Root legacy (if touched): `ruff check src/ --ignore E501`, `black --check src/ tests/`.  
   - Build: `python -m build && twine check dist/*`.
-- **Run/demo**: `python project_irh_v16.py` (root; set PYTHONPATH); web backend `cd webapp/backend && pip install -r requirements.txt && python app.py`; frontend `cd webapp/frontend && npm install && npm run dev` (Vite :5173).
+- **Run/demo**: `python project_irh_v16.py` (root; set PYTHONPATH); web backend `cd webapp/backend && pip install -r requirements.txt && uvicorn app:app --reload` (API at :8000, docs at :8000/docs).
 - **v18 quick verification**:
   ```python
   from irh.core.v18 import StandardModelTopology, NeutrinoSector, EmergentQFT
@@ -761,10 +762,21 @@ Every contribution to the IRH codebase must satisfy:
   qft = EmergentQFT()
   assert all(qft.verify_standard_model().values())  # Complete SM from cGFT
   ```
+- **v21 API quick verification**:
+  ```bash
+  # Start API server
+  cd webapp/backend && uvicorn app:app --reload &
+  
+  # Test endpoints
+  curl http://localhost:8000/health
+  curl http://localhost:8000/api/v1/fixed-point
+  curl http://localhost:8000/api/v1/observables/alpha
+  ```
 - **Conventions**: PEP 8, line length 100, NumPy docstrings with equation refs; phase wrapping via `np.mod(angle, 2*np.pi)` and `_wrapped_phase_difference` with `PHASE_TOLERANCE=1e-10`; input normalization via `_to_bytes`; wrap `np.exp(...)` in `complex(...)`.
 - **CI signals**: `.github/workflows/ci.yml` (pytest on `tests/`, ruff on `src/`, mypy on `src/irh_v10`) and `ci-cd.yml` (black/mypy, v16 legacy tests, python package tests/coverage, docs check, benchmarks, Wolfram notice, release stub). Prefer Python 3.12 and correct PYTHONPATH to mirror CI.
 - **Agent reminders**: keep changes minimal, place new code in `python/src/irh/...` with matching tests in `python/tests/...`, avoid new deps unless required, and trust these instructions before searching.
-- **Repository organization**: Status documents in `docs/status/`, handoff docs in `docs/handoff/`, legacy files in `archive/`.
+- **Repository organization**: Status documents in `docs/status/`, handoff docs in `docs/handoff/`, legacy files in `archive/`, webapp in `webapp/`.
+- **Current Phase**: Tier 4 Phase 4.1 - Web Interface (Backend complete ✅, Frontend next)
 
 ## v18 Module Summary (15 modules)
 
@@ -1099,7 +1111,7 @@ See `docs/DEB_PACKAGE_ROADMAP.md` for detailed specifications.
 cd /home/runner/work/Intrinsic_Resonace_Holography-/Intrinsic_Resonace_Holography-
 export PYTHONPATH=$PWD
 
-# Run all tests (564+ tests)
+# Run all tests (941+ tests)
 python -m pytest tests/unit/ -v
 
 # Run Phase I tests (74+ tests)
@@ -1120,7 +1132,7 @@ python -m pytest tests/unit/test_phase_v.py -v
 # Run Phase VI tests (36 tests)
 cd desktop && python -m pytest tests/test_phase_vi.py -v
 
-# Run Performance tests (210 tests)
+# Run Performance tests (301+ tests)
 python -m pytest tests/unit/test_performance/ -v
 
 # Test core functionality
@@ -1132,7 +1144,10 @@ python -c "from src.cosmology import compute_dark_energy_eos; print(compute_dark
 python -c "from src.falsifiable_predictions import compute_liv_parameter; print(compute_liv_parameter())"
 
 # Test MPI parallelization (with serial fallback)
-python -c "from src.performance import MPIContext, distributed_rg_flow; print('MPI available:', is_mpi_available())"
+python -c "from src.performance import MPIContext, is_mpi_available; print('MPI available:', is_mpi_available())"
+
+# Test distributed computing (with serial fallback)
+python -c "from src.performance import DistributedContext, is_dask_available, is_ray_available; print('Dask available:', is_dask_available()); print('Ray available:', is_ray_available())"
 ```
 
 ### Tier 3 Phase 3.4: MPI Parallelization (COMPLETE ✅)
@@ -1221,6 +1236,105 @@ print(f"Distance matrix shape: {distances['distance_matrix'].shape}")
 ```
 
 **Test Count**: 44 tests in `tests/unit/test_performance/test_gpu_acceleration.py`
+
+### Tier 3 Phase 3.6: Distributed Computing (COMPLETE ✅)
+
+The distributed computing module has been implemented with the following features:
+
+**Distributed Module** (`src/performance/distributed.py`):
+- `DistributedBackend` - Enum for backend selection (Dask, Ray, Serial)
+- `DistributedContext` - Cluster management with automatic serial fallback
+- `dask_rg_flow()` - Dask-based distributed RG flow integration (§1.2)
+- `ray_parameter_scan()` - Ray-based parameter space exploration (§1.3)
+- `distributed_monte_carlo()` - Distributed Monte Carlo sampling on G_inf (§1.1)
+- `distributed_qncd_matrix()` - Distributed QNCD distance matrix computation (Appendix A)
+- `distributed_map()` - Generic parallel map function
+- `is_dask_available()` / `is_ray_available()` - Check backend availability
+- `get_distributed_info()` - Get distributed environment information
+- `create_local_cluster()` / `shutdown_cluster()` - Cluster management
+
+**Usage Example**:
+```python
+from src.performance import (
+    DistributedContext, DistributedBackend, dask_rg_flow, ray_parameter_scan,
+    distributed_monte_carlo, distributed_qncd_matrix, distributed_map,
+    is_dask_available, is_ray_available, get_distributed_info
+)
+import numpy as np
+
+# Check availability
+print(f"Dask available: {is_dask_available()}")
+print(f"Ray available: {is_ray_available()}")
+print(get_distributed_info())
+
+# Distributed RG flow integration
+with DistributedContext() as ctx:
+    initial_conditions = np.random.rand(100, 3) * 100
+    result = dask_rg_flow(initial_conditions, t_range=(-10, 10), ctx=ctx)
+    print(f"Converged: {result['n_converged']} / {result['n_trajectories']}")
+
+# Distributed parameter scan
+grid = np.random.rand(500, 3) * 100
+result = ray_parameter_scan(grid)
+print(f"Best point distance to fixed point: {result['min_value']:.4f}")
+
+# Distributed Monte Carlo
+mc_result = distributed_monte_carlo(n_samples=10000, n_batches=10)
+print(f"Observable mean: {mc_result['mean']:.4f} ± {mc_result['std']:.4f}")
+
+# Distributed QNCD matrix
+vectors = np.random.rand(200, 4)
+qncd_result = distributed_qncd_matrix(vectors, n_blocks=8)
+print(f"QNCD matrix shape: {qncd_result['distance_matrix'].shape}")
+
+# Generic distributed map
+results = distributed_map(lambda x: x ** 2, list(range(100)))
+```
+
+**Test Count**: 47 tests in `tests/unit/test_performance/test_distributed.py`
+
+**Tier 3 Complete**: All 8 phases (301+ tests total)
+
+### Tier 4 Phase 4.1: Web Interface (BACKEND COMPLETE ✅)
+
+The FastAPI backend for the web interface has been implemented.
+
+**Web API** (`webapp/backend/app.py`):
+- FastAPI REST API with 13 endpoints
+- Pydantic models for request/response validation
+- CORS middleware for frontend access
+- Swagger UI at `/docs` and ReDoc at `/redoc`
+
+**API Endpoints**:
+- `GET /` - API info and links
+- `GET /health` - Health check
+- `GET /api/v1/fixed-point` - Cosmic Fixed Point (Eq. 1.14)
+- `POST /api/v1/rg-flow` - RG flow integration
+- `GET /api/v1/observables/C_H` - Universal exponent (Eq. 1.16)
+- `GET /api/v1/observables/alpha` - Fine-structure constant (Eq. 3.4-3.5)
+- `GET /api/v1/observables/dark-energy` - Dark energy w₀ (§2.3)
+- `GET /api/v1/observables/liv` - LIV parameter ξ (§2.5)
+- `GET /api/v1/standard-model/gauge-group` - Gauge group derivation
+- `GET /api/v1/standard-model/neutrinos` - Neutrino predictions
+- `GET /api/v1/falsification/summary` - All testable predictions
+
+**Usage**:
+```bash
+# Start the backend
+cd webapp/backend
+pip install -r requirements.txt
+uvicorn app:app --reload
+
+# API available at http://localhost:8000
+# Docs at http://localhost:8000/docs
+```
+
+**Test Count**: 13 tests in `webapp/backend/tests/test_api.py`
+
+**Next Steps for Phase 4.1**:
+- React/Vue frontend implementation
+- WebSocket support for real-time updates
+- Celery task queue for long computations
 
 ---
 
