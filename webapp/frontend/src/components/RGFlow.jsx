@@ -32,7 +32,17 @@ function RGFlow() {
   };
 
   const handleParamChange = (key, value) => {
-    setParams((prev) => ({ ...prev, [key]: parseFloat(value) }));
+    const numValue = parseFloat(value);
+    // Only update if the value is a valid number, otherwise keep the previous value
+    if (!isNaN(numValue)) {
+      setParams((prev) => ({ ...prev, [key]: numValue }));
+    }
+  };
+
+  // Helper function to get the correct time index for sampled trajectory points
+  const getTimeIndex = (sampleIndex, timesLength) => {
+    const actualIndex = sampleIndex * 50;
+    return actualIndex < timesLength ? actualIndex : timesLength - 1;
   };
 
   return (
@@ -166,14 +176,17 @@ function RGFlow() {
                 <tbody>
                   {trajectory.trajectory
                     ?.filter((_, i) => i % 50 === 0 || i === trajectory.trajectory.length - 1)
-                    .map((point, i) => (
-                      <tr key={i}>
-                        <td>{trajectory.times?.[i * 50 < trajectory.times.length ? i * 50 : trajectory.times.length - 1]?.toFixed(3)}</td>
-                        <td>{point[0]?.toFixed(4)}</td>
-                        <td>{point[1]?.toFixed(4)}</td>
-                        <td>{point[2]?.toFixed(4)}</td>
-                      </tr>
-                    ))
+                    .map((point, i) => {
+                      const timeIndex = getTimeIndex(i, trajectory.times?.length || 0);
+                      return (
+                        <tr key={i}>
+                          <td>{trajectory.times?.[timeIndex]?.toFixed(3)}</td>
+                          <td>{point[0]?.toFixed(4)}</td>
+                          <td>{point[1]?.toFixed(4)}</td>
+                          <td>{point[2]?.toFixed(4)}</td>
+                        </tr>
+                      );
+                    })
                   }
                 </tbody>
               </table>
