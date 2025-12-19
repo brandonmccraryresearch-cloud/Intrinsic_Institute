@@ -18,6 +18,16 @@ Click any "Open in Colab" button to run notebooks directly in Google Colab - no 
 | **03_observable_extraction** | Extract physical constants | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/brandonmccraryresearch-cloud/Intrinsic_Resonance_Holography-/blob/main/notebooks/03_observable_extraction.ipynb) |
 | **04_falsification_analysis** | Falsifiable predictions | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/brandonmccraryresearch-cloud/Intrinsic_Resonance_Holography-/blob/main/notebooks/04_falsification_analysis.ipynb) |
 
+## Computational Findings
+
+**Important**: See [`docs/NOTEBOOK_FINDINGS.md`](../docs/NOTEBOOK_FINDINGS.md) for documented computational discrepancies and their theoretical explanations:
+
+1. **Beta functions vs Fixed Point**: One-loop β-functions (Eq. 1.13) don't have zeros at Cosmic Fixed Point values (Eq. 1.14) - this is theoretically correct; the fixed point arises from the full Wetterich equation.
+
+2. **Fermion Mass Predictions**: Current K_f derivation shows significant deviations from experiment, especially for first-generation fermions (electron: ~1700% deviation). Future work needed.
+
+3. **Universal Exponent C_H**: Two values exist - ratio formula (0.75) and spectral zeta (0.045935703598). The spectral value is used for physical predictions.
+
 ## Topics Covered
 
 ### 00_quickstart
@@ -78,7 +88,8 @@ Colab notebooks auto-install dependencies.
 ## Theoretical Reference
 
 All notebooks reference the canonical manuscript:
-[IRH v21.1 Manuscript ([Part 1](../Intrinsic_Resonance_Holography-v21.1-Part1.md), [Part 2](../Intrinsic_Resonance_Holography-v21.1-Part2.md))](../IRH v21.1 Manuscript ([Part 1](../Intrinsic_Resonance_Holography-v21.1-Part1.md), [Part 2](../Intrinsic_Resonance_Holography-v21.1-Part2.md)))
+- [IRH v21.1 Manuscript Part 1](../Intrinsic_Resonance_Holography-v21.1-Part1.md) (Sections 1-4)
+- [IRH v21.1 Manuscript Part 2](../Intrinsic_Resonance_Holography-v21.1-Part2.md) (Sections 5-8 + Appendices)
 
 ## Citation
 

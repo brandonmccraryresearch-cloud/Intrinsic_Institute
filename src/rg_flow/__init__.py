@@ -20,8 +20,8 @@ Modules:
     beta_functions: β_λ, β_γ, β_μ implementation (Eq. 1.13) ✓ COMPLETE
     fixed_points: Cosmic Fixed Point solver (Eq. 1.14) ✓ COMPLETE
     validation: Phase IV validation and verification ✓ COMPLETE
-    wetterich: Exact RG equation integrator (TODO)
-    running_couplings: Scale-dependent parameter evolution (TODO)
+    wetterich: Exact RG equation integrator (Eq. 1.12) ✓ COMPLETE
+    running_couplings: Scale-dependent parameter evolution (§1.2) ✓ COMPLETE
     stability_analysis: Eigenvalue spectrum, IR attractiveness (IN validation.py)
 
 Dependencies:
@@ -29,7 +29,7 @@ Dependencies:
     - src.cgft (Layer 1)
 
 Authors: IRH Computational Framework Team
-Last Updated: December 2024 (synchronized with IRH21.md v21.0)
+Last Updated: December 2025 (synchronized with IRH21.md v21.0)
 """
 
 __version__ = "21.0.0"
@@ -76,6 +76,32 @@ from .validation import (
     generate_benchmark_report,
 )
 
+# Import from wetterich module (Eq. 1.12)
+from .wetterich import (
+    Regulator,
+    EffectiveAction,
+    WetterichSolver,
+    solve_wetterich_equation,
+    verify_wetterich_at_fixed_point,
+    K_0,
+    LITIM_REGULATOR,
+    EXPONENTIAL_REGULATOR,
+)
+
+# Import from running_couplings module (§1.2)
+from .running_couplings import (
+    RunningCouplings,
+    CouplingTrajectory,
+    compute_running_couplings,
+    integrate_running_couplings,
+    running_alpha_inverse,
+    running_C_H,
+    coupling_at_energy_scale,
+    analyze_running,
+    K_UV,
+    K_IR,
+)
+
 __all__ = [
     # Constants
     'LAMBDA_STAR',
@@ -84,6 +110,11 @@ __all__ = [
     'C_H',
     'C_H_RATIO',
     'C_H_SPECTRAL',
+    'K_0',
+    'K_UV',
+    'K_IR',
+    'LITIM_REGULATOR',
+    'EXPONENTIAL_REGULATOR',
     
     # Beta functions (from beta_functions)
     'BetaFunctions',
@@ -111,4 +142,21 @@ __all__ = [
     'BenchmarkResult',
     'run_analytical_benchmarks',
     'generate_benchmark_report',
+    
+    # Wetterich equation (from wetterich)
+    'Regulator',
+    'EffectiveAction',
+    'WetterichSolver',
+    'solve_wetterich_equation',
+    'verify_wetterich_at_fixed_point',
+    
+    # Running couplings (from running_couplings)
+    'RunningCouplings',
+    'CouplingTrajectory',
+    'compute_running_couplings',
+    'integrate_running_couplings',
+    'running_alpha_inverse',
+    'running_C_H',
+    'coupling_at_energy_scale',
+    'analyze_running',
 ]

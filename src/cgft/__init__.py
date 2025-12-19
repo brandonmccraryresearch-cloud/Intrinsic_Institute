@@ -13,17 +13,17 @@ Key Components:
     - QNCD-weighted interaction kernel with phase coherence
 
 Modules:
-    fields: φ(g₁,g₂,g₃,g₄) ∈ ℍ field representations
-    actions: S_kin, S_int, S_hol (Eqs. 1.1-1.4)
-    operators: Laplace-Beltrami operators, functional derivatives
-    interactions: QNCD-weighted kernels, phase coherence
+    fields: φ(g₁,g₂,g₃,g₄) ∈ ℍ field representations ✓ COMPLETE
+    actions: S_kin, S_int, S_hol (Eqs. 1.1-1.4) ✓ COMPLETE
+    operators: Laplace-Beltrami operators, functional derivatives ✓ COMPLETE
+    interactions: QNCD-weighted kernels, phase coherence ✓ COMPLETE
     symmetries: Gauge transformations, Weyl ordering
 
 Dependencies:
     - src.primitives (Layer 0)
 
 Authors: IRH Computational Framework Team
-Last Updated: December 2024 (synchronized with IRH21.md v21.0)
+Last Updated: December 2025 (synchronized with IRH21.md v21.0)
 """
 
 __version__ = "21.0.0"
@@ -49,6 +49,29 @@ from .fields import (
     verify_gauge_invariance,
 )
 
+# Import from operators module (§1.1)
+from .operators import (
+    SU2_GENERATORS,
+    SIGMA_X,
+    SIGMA_Y,
+    SIGMA_Z,
+    laplace_beltrami_SU2,
+    sum_laplacians,
+    functional_derivative,
+    hessian_operator,
+    casimir_operator,
+)
+
+# Import from interactions module (§1.1, Eq. 1.3)
+from .interactions import (
+    QNCD,
+    interaction_kernel,
+    QNCD_weighted_kernel,
+    four_point_interaction,
+    holographic_interaction,
+    compute_interaction_matrix,
+)
+
 __all__ = [
     # actions exports (Eqs. 1.1-1.4)
     'compute_kinetic_action',
@@ -66,11 +89,22 @@ __all__ = [
     'apply_gauge_transform',
     'verify_gauge_invariance',
     
-    # operators exports (placeholder)
+    # operators exports (§1.1)
+    'SU2_GENERATORS',
+    'SIGMA_X',
+    'SIGMA_Y',
+    'SIGMA_Z',
     'laplace_beltrami_SU2',
+    'sum_laplacians',
     'functional_derivative',
+    'hessian_operator',
+    'casimir_operator',
     
-    # interactions exports (placeholder)
+    # interactions exports (§1.1, Eq. 1.3)
+    'QNCD',
     'interaction_kernel',
     'QNCD_weighted_kernel',
+    'four_point_interaction',
+    'holographic_interaction',
+    'compute_interaction_matrix',
 ]

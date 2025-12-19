@@ -705,8 +705,8 @@ The IRH development roadmap is organized into **4 tiers**, each containing **5-1
 
 | Phase | Description | Target | Priority | Status |
 |-------|-------------|--------|----------|--------|
-| 4.1 | Web Interface (FastAPI + React) | Q4 2025 | MEDIUM | 🔄 Backend Complete |
-| 4.2 | Cloud Deployment (Docker/K8s) | Q1 2026 | MEDIUM | 📋 Planned |
+| 4.1 | Web Interface (FastAPI + React) | Q4 2025 | MEDIUM | ✅ Complete |
+| 4.2 | Cloud Deployment (Docker/K8s) | Q4 2025 | MEDIUM | ✅ Complete |
 | 4.3 | ML Surrogate Models | Q2 2026 | LOW | 📋 Planned |
 | 4.4 | Experimental Data Pipeline | Q2 2026 | MEDIUM | 📋 Planned |
 | 4.5 | Automated PDG/CODATA Updates | Q3 2026 | MEDIUM | 📋 Planned |
@@ -716,17 +716,25 @@ The IRH development roadmap is organized into **4 tiers**, each containing **5-1
 | 4.9 | Community Forum Integration | Q1 2027 | LOW | 📋 Planned |
 | 4.10 | Research Paper Template Generator | Q4 2026 | MEDIUM | 📋 Planned |
 
-**Phase 4.1 Progress**:
+**Phase 4.1 Complete** ✅:
 - ✅ FastAPI backend (`webapp/backend/app.py`) - 13 endpoints, 13 tests passing
-- ⏳ React/Vue frontend - Coming next
-- ⏳ Real-time WebSocket updates - Planned
+- ✅ React frontend (`webapp/frontend/`) - 6 pages with full functionality
+- ✅ Dashboard, Fixed Point, RG Flow, Observables, Standard Model, Falsification pages
+
+**Phase 4.2 Complete** ✅:
+- ✅ Docker containerization (`deploy/docker/`) - Multi-stage builds for backend/frontend
+- ✅ docker-compose configuration - Production-ready with health checks
+- ✅ Kubernetes manifests (`deploy/kubernetes/`) - Namespace, deployments, services
+- ✅ Ingress configuration with TLS support
+- ✅ Horizontal Pod Autoscaler for elastic scaling
+- ✅ ConfigMap with IRH physical constants
 
 **Tier 4 Goals**:
 - Accessible web interface for non-programmers
 - Integration with experimental physics databases
 - Active research community
 
-**Current Phase**: 4.1 Web Interface - Backend complete, frontend next.
+**Current Phase**: 4.3 ML Surrogate Models - Neural network approximations for RG flow next.
 
 ### Tier Milestones Summary
 
@@ -735,7 +743,7 @@ The IRH development roadmap is organized into **4 tiers**, each containing **5-1
 | **Tier 1** | Foundation | 7 | 2025 | ✅ COMPLETE |
 | **Tier 2** | Applications | 7 | 2025 | ✅ COMPLETE |
 | **Tier 3** | Optimization | 8 | 2025 | ✅ COMPLETE |
-| **Tier 4** | Ecosystem | 10 | 2025-2027 | 🔄 IN PROGRESS (1/10) |
+| **Tier 4** | Ecosystem | 10 | 2025-2027 | 🔄 IN PROGRESS (2/10 complete) |
 
 ---
 
