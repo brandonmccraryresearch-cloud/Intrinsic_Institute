@@ -68,8 +68,25 @@ class GroupManifold:
     is_connected: bool = True
     
     def homotopy_groups(self) -> Dict[int, str]:
-        """Get low-dimensional homotopy groups."""
-        raise NotImplementedError
+        """
+        Get low-dimensional homotopy groups.
+        
+        THEORETICAL REFERENCE: IRH21.md §1.1
+        
+        Returns π_k(G) for k = 1, 2, 3.
+        Override in subclasses for specific groups.
+        
+        Returns
+        -------
+        Dict[int, str]
+            Dictionary mapping k → π_k(G)
+        """
+        # Default implementation for generic manifolds
+        return {
+            1: "Unknown",
+            2: "Unknown",
+            3: "Unknown",
+        }
 
 
 @dataclass

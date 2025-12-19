@@ -6,13 +6,13 @@ of the computational framework. These utilities are theory-agnostic and can
 be used independently of the IRH-specific modules.
 
 Modules:
-    instrumentation: Theoretical logging and traceability (Phase II)
-    output_contextualization: Standardized outputs with provenance (Phase III)
-    integration: Numerical quadrature on group manifolds
-    optimization: Fixed-point solvers, minimizers
-    special_functions: Bessel, hypergeometric, etc.
-    lattice_discretization: Finite-volume approximations
-    parallel_computing: MPI/OpenMP infrastructure
+    instrumentation: Theoretical logging and traceability (Phase II) ✓ COMPLETE
+    output_contextualization: Standardized outputs with provenance (Phase III) ✓ COMPLETE
+    integration: Numerical quadrature on group manifolds ✓ COMPLETE
+    optimization: Fixed-point solvers, minimizers ✓ COMPLETE
+    special_functions: Bessel, hypergeometric, Wigner D-matrices ✓ COMPLETE
+    lattice_discretization: Finite-volume approximations ✓ COMPLETE
+    parallel_computing: Thread/process parallelization ✓ COMPLETE
 
 Design Principles:
     1. No IRH-specific assumptions
@@ -26,7 +26,7 @@ Dependencies:
     - Optional: mpi4py (distributed computing)
 
 Authors: IRH Computational Framework Team
-Last Updated: December 2024 (synchronized with IRH21.md v21.0)
+Last Updated: December 2025 (synchronized with IRH21.md v21.0)
 """
 
 __version__ = "21.0.0"
@@ -54,6 +54,47 @@ from .output_contextualization import (
     format_observable,
 )
 
+# Import integration module
+from .integration import (
+    integrate_SU2,
+    integrate_U1,
+    integrate_G_inf,
+    monte_carlo_integrate,
+)
+
+# Import optimization module
+from .optimization import (
+    find_fixed_point_newton,
+    minimize_functional,
+    root_find,
+)
+
+# Import special functions module
+from .special_functions import (
+    bessel_j,
+    hypergeometric_2f1,
+    wigner_d_matrix,
+    wigner_D_matrix,
+    clebsch_gordan,
+    spherical_harmonic,
+)
+
+# Import lattice discretization module
+from .lattice_discretization import (
+    discretize_SU2,
+    discretize_U1,
+    laplacian_matrix,
+    lattice_volume,
+)
+
+# Import parallel computing module
+from .parallel_computing import (
+    parallel_map,
+    distributed_sum,
+    batch_compute,
+    get_optimal_workers,
+)
+
 __all__ = [
     # instrumentation exports (Phase II)
     'IRHLogLevel',
@@ -74,28 +115,34 @@ __all__ = [
     'create_output_writer',
     'format_observable',
     
-    # integration exports (placeholder)
+    # integration exports
     'integrate_SU2',
     'integrate_U1',
     'integrate_G_inf',
     'monte_carlo_integrate',
     
-    # optimization exports (placeholder)
+    # optimization exports
     'find_fixed_point_newton',
     'minimize_functional',
     'root_find',
     
-    # special_functions exports (placeholder)
+    # special_functions exports
     'bessel_j',
     'hypergeometric_2f1',
     'wigner_d_matrix',
+    'wigner_D_matrix',
+    'clebsch_gordan',
+    'spherical_harmonic',
     
-    # lattice_discretization exports (placeholder)
+    # lattice_discretization exports
     'discretize_SU2',
     'discretize_U1',
     'laplacian_matrix',
+    'lattice_volume',
     
-    # parallel_computing exports (placeholder)
+    # parallel_computing exports
     'parallel_map',
     'distributed_sum',
+    'batch_compute',
+    'get_optimal_workers',
 ]
