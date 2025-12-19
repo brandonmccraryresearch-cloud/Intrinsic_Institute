@@ -10,6 +10,7 @@ This module provides comprehensive performance optimization capabilities:
     - Memory optimization tools (array pooling, sparse arrays, GC tuning)
     - MPI parallelization for distributed computing
     - GPU acceleration using JAX/CuPy
+    - Distributed computing with Dask/Ray for cluster-scale operations
 
 The optimization layer maintains theoretical fidelity while achieving
 significant speedups for exascale-ready computations.
@@ -23,6 +24,7 @@ Implementation Timeline:
     Phase 3.3: Memory Optimization (Q1 2026) ✅
     Phase 3.4: MPI Parallelization (Q2 2026) ✅
     Phase 3.5: GPU Acceleration (Q3 2026) ✅
+    Phase 3.6: Distributed Computing (Q4 2025) ✅
 """
 
 from __future__ import annotations
@@ -99,6 +101,22 @@ from .gpu_acceleration import (
     benchmark_gpu_performance,
 )
 
+from .distributed import (
+    DistributedBackend,
+    DistributedContext,
+    dask_rg_flow,
+    ray_parameter_scan,
+    distributed_monte_carlo,
+    distributed_qncd_matrix,
+    distributed_map,
+    is_dask_available,
+    is_ray_available,
+    get_distributed_info,
+    get_available_distributed_backends,
+    create_local_cluster,
+    shutdown_cluster,
+)
+
 __all__ = [
     # Cache Management
     'CacheManager',
@@ -162,4 +180,19 @@ __all__ = [
     'get_available_backends',
     'set_default_backend',
     'benchmark_gpu_performance',
+    
+    # Distributed Computing (Dask/Ray)
+    'DistributedBackend',
+    'DistributedContext',
+    'dask_rg_flow',
+    'ray_parameter_scan',
+    'distributed_monte_carlo',
+    'distributed_qncd_matrix',
+    'distributed_map',
+    'is_dask_available',
+    'is_ray_available',
+    'get_distributed_info',
+    'get_available_distributed_backends',
+    'create_local_cluster',
+    'shutdown_cluster',
 ]
