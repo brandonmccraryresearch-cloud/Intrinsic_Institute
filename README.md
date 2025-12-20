@@ -27,6 +27,7 @@
 | [**Architecture Overview**](./docs/architectural_overview.md) | System design and ontological layer structure |
 | [**Desktop App Roadmap**](./docs/DEB_PACKAGE_ROADMAP.md) | Implementation plan for .deb desktop application |
 | [**Contributing Guidelines**](./CONTRIBUTING.md) | How to contribute to the project |
+| [**GitHub Copilot Instructions**](./.github/copilot-instructions.md) | 🤖 Comprehensive guide for GitHub Copilot users (coding standards, patterns, domain knowledge) |
 
 ---
 

@@ -4,6 +4,16 @@
 
 Thank you for your interest in contributing to the Intrinsic Resonance Holography v21.0 Computational Framework. This repository instantiates a unified theoretical framework that derives fundamental physical laws from quantum-informational principles. Contributions must maintain **theoretical fidelity** to the canonical manuscript `IRH21.md`.
 
+### 🤖 GitHub Copilot Users
+
+If you're using GitHub Copilot, please review our comprehensive [Copilot Instructions](.github/copilot-instructions.md) which provide detailed guidance on:
+- Repository structure and coding standards
+- Theoretical foundations and equation references
+- Domain-specific patterns and conventions
+- Testing requirements and validation protocols
+
+The instructions help Copilot provide better suggestions that align with our theoretical framework and coding practices.
+
 ## Core Principles
 
 ### 1. Theoretical Traceability
