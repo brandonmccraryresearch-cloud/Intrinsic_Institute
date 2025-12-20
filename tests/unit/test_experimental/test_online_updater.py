@@ -306,7 +306,7 @@ class TestReportGeneration:
             )
         ]
         
-        report = generate_change_report(constants, constants, format='text')
+        report = generate_change_report(constants, constants, output_format='text')
         
         assert 'No changes detected' in report
     
@@ -337,17 +337,17 @@ class TestReportGeneration:
         ]
         
         # Test markdown format
-        report = generate_change_report(old_constants, new_constants, format='markdown')
+        report = generate_change_report(old_constants, new_constants, output_format='markdown')
         assert '# Experimental Data Changes' in report
         assert 'α' in report
         
         # Test text format
-        report = generate_change_report(old_constants, new_constants, format='text')
+        report = generate_change_report(old_constants, new_constants, output_format='text')
         assert 'EXPERIMENTAL DATA CHANGES' in report
         assert 'α' in report
         
         # Test JSON format
-        report = generate_change_report(old_constants, new_constants, format='json')
+        report = generate_change_report(old_constants, new_constants, output_format='json')
         # JSON might escape Unicode as \u03b1
         assert '"symbol"' in report and ('α' in report or '\\u03b1' in report)
     
@@ -357,9 +357,9 @@ class TestReportGeneration:
         new = [PhysicalConstant('test', 'α', 137.1, 0.1, '', 'Test', 2024)]
         
         # All formats should work
-        markdown = generate_change_report(old, new, format='markdown')
-        text = generate_change_report(old, new, format='text')
-        json_str = generate_change_report(old, new, format='json')
+        markdown = generate_change_report(old, new, output_format='markdown')
+        text = generate_change_report(old, new, output_format='text')
+        json_str = generate_change_report(old, new, output_format='json')
         
         assert len(markdown) > 0
         assert len(text) > 0
@@ -509,7 +509,7 @@ class TestIntegration:
         
         # Generate report
         if len(result.constants) > 0:
-            report = generate_change_report([], result.constants, format='markdown')
+            report = generate_change_report([], result.constants, output_format='markdown')
             assert len(report) > 0
     
     def test_validation_workflow(self, temp_cache_dir):

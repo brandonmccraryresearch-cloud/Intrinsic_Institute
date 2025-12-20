@@ -555,7 +555,7 @@ def check_for_data_updates(cache_dir: str = "data/cache/experimental") -> Dict:
 def generate_change_report(
     old_constants: List[PhysicalConstant],
     new_constants: List[PhysicalConstant],
-    format: str = 'markdown'
+    output_format: str = 'markdown'
 ) -> str:
     """
     Generate report of changed constants.
@@ -566,7 +566,7 @@ def generate_change_report(
         Previous values
     new_constants : List[PhysicalConstant]
         New values
-    format : str
+    output_format : str
         Output format ('markdown', 'text', or 'json')
     
     Returns
@@ -593,10 +593,10 @@ def generate_change_report(
                     'rel_change': (new_val.value - old_val.value) / old_val.value
                 })
     
-    if format == 'json':
+    if output_format == 'json':
         return json.dumps(changes, indent=2)
     
-    elif format == 'markdown':
+    elif output_format == 'markdown':
         report = "# Experimental Data Changes\n\n"
         report += f"**Generated**: {datetime.now().isoformat()}\n\n"
         
