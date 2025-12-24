@@ -438,13 +438,43 @@ class TransparencyEngine:
         msg_type = MessageType.VALIDATION if passed else MessageType.FAILED
         self._emit(msg_type, content, **metadata)
     
-    def warning(self, content: str, **metadata):
-        """Emit warning message."""
-        self._emit(MessageType.WARNING, content, **metadata)
+    def warning(self, content: str, reference: Optional[str] = None, **metadata):
+        """
+        Emit warning message.
+        
+        Theoretical Reference:
+            IRH v21.4 Algorithmic Transparency Mandate §1.0
+            Module header, lines 4-16
+        
+        Parameters
+        ----------
+        content : str
+            Warning message content
+        reference : Optional[str]
+            Manuscript reference for the warning context
+        **metadata : Any
+            Additional metadata
+        """
+        self._emit(MessageType.WARNING, content, reference=reference, **metadata)
     
-    def error(self, content: str, **metadata):
-        """Emit error message."""
-        self._emit(MessageType.ERROR, content, **metadata)
+    def error(self, content: str, reference: Optional[str] = None, **metadata):
+        """
+        Emit error message.
+        
+        Theoretical Reference:
+            IRH v21.4 Algorithmic Transparency Mandate §1.0
+            Module header, lines 4-16
+        
+        Parameters
+        ----------
+        content : str
+            Error message content
+        reference : Optional[str]
+            Manuscript reference for the error context
+        **metadata : Any
+            Additional metadata
+        """
+        self._emit(MessageType.ERROR, content, reference=reference, **metadata)
     
     def result(
         self,
@@ -486,13 +516,43 @@ class TransparencyEngine:
             **metadata
         )
     
-    def passed(self, content: str, **metadata):
-        """Emit success message."""
-        self._emit(MessageType.PASSED, content, **metadata)
+    def passed(self, content: str, reference: Optional[str] = None, **metadata):
+        """
+        Emit success message.
+        
+        Theoretical Reference:
+            IRH v21.4 Algorithmic Transparency Mandate §1.0
+            Module header, lines 4-16
+        
+        Parameters
+        ----------
+        content : str
+            Success message content
+        reference : Optional[str]
+            Manuscript reference for the validation context
+        **metadata : Any
+            Additional metadata
+        """
+        self._emit(MessageType.PASSED, content, reference=reference, **metadata)
     
-    def failed(self, content: str, **metadata):
-        """Emit failure message."""
-        self._emit(MessageType.FAILED, content, **metadata)
+    def failed(self, content: str, reference: Optional[str] = None, **metadata):
+        """
+        Emit failure message.
+        
+        Theoretical Reference:
+            IRH v21.4 Algorithmic Transparency Mandate §1.0
+            Module header, lines 4-16
+        
+        Parameters
+        ----------
+        content : str
+            Failure message content
+        reference : Optional[str]
+            Manuscript reference for the validation context
+        **metadata : Any
+            Additional metadata
+        """
+        self._emit(MessageType.FAILED, content, reference=reference, **metadata)
     
     # -------------------------------------------------------------------------
     # Provenance Tracking
