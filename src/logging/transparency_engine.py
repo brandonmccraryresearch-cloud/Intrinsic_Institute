@@ -421,6 +421,10 @@ class TransparencyEngine:
         """
         Emit validation check result.
         
+        Theoretical Reference:
+            IRH v21.4 Algorithmic Transparency Mandate §1.0
+            Validation protocol for computational integrity
+        
         Parameters
         ----------
         check_name : str
@@ -487,6 +491,10 @@ class TransparencyEngine:
     ):
         """
         Emit final result with full context.
+        
+        Theoretical Reference:
+            IRH v21.4 Algorithmic Transparency Mandate §1.0
+            Result reporting with provenance tracking
         
         Parameters
         ----------
@@ -573,7 +581,37 @@ class TransparencyEngine:
         """
         Add complete provenance chain for a result.
         
+        Theoretical Reference:
+            IRH v21.4 Algorithmic Transparency Mandate §1.0
+            Provenance tracking for computational reproducibility
+        
         This creates a permanent record of how a result was derived.
+        
+        Parameters
+        ----------
+        result_name : str
+            Name of the result
+        final_value : float
+            Computed value
+        uncertainty : float
+            Uncertainty bound
+        theoretical_reference : str
+            Manuscript citation
+        formula : str
+            Mathematical formula used
+        components : Dict[str, Any]
+            Result components
+        input_sources : List[str]
+            Data sources
+        computational_method : str
+            Algorithm description
+        validation_checks : Dict[str, bool]
+            Validation results
+        
+        Returns
+        -------
+        ProvenanceChain
+            Complete provenance record
         """
         chain = ProvenanceChain(
             result_name=result_name,

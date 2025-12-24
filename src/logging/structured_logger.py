@@ -238,7 +238,22 @@ class StructuredLogger:
         self.log(LogLevel.STEP, message, **kwargs)
     
     def result(self, message: str, value: Any = None, **kwargs) -> None:
-        """Log computation result."""
+        """
+        Log computation result.
+        
+        Theoretical Reference:
+            IRH21.md Appendix K, §1.0 (Structured Logging Protocol)
+            Result logging with theoretical traceability
+        
+        Parameters
+        ----------
+        message : str
+            Result description
+        value : Any, optional
+            Computed value
+        **kwargs : Any
+            Additional log metadata
+        """
         self.log(LogLevel.RESULT, message, result=value, **kwargs)
     
     def warning(self, message: str, **kwargs) -> None:
