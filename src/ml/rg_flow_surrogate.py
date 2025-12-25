@@ -536,6 +536,7 @@ class RGFlowSurrogate:
     >>> trajectory = surrogate.predict_trajectory(initial, t_range=(-5, 5))
     """
     
+    # Theoretical Reference: IRH v21.4
     def __init__(self, config: Optional[SurrogateConfig] = None):
         """
         Initialize RG flow surrogate model.
@@ -647,6 +648,7 @@ class RGFlowSurrogate:
             'ensemble_size': len(self.ensemble),
         }
     
+    # Theoretical Reference: IRH v21.4
     def predict(
         self,
         couplings: np.ndarray,

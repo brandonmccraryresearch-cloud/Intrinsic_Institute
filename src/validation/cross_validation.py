@@ -48,6 +48,7 @@ class ConvergenceResult:
     status: ValidationStatus
     theoretical_reference: str = "IRH v21.1 Manuscript Part 2 Appendix A.5"
     
+    # Theoretical Reference: IRH v21.4
     def is_converged(self, threshold: float = 1e-4) -> bool:
         """Check if convergence achieved within threshold."""
         return self.relative_error < threshold and self.convergence_rate > 0
@@ -88,6 +89,7 @@ class CrossValidationResult:
     threshold: float = 1e-5
     theoretical_reference: str = "IRH v21.1 Manuscript Phase V"
     
+    # Theoretical Reference: IRH v21.4
     def methods_agree(self) -> bool:
         """Check if methods agree within threshold."""
         return self.relative_difference < self.threshold
@@ -382,6 +384,7 @@ class AlgorithmicCrossValidation:
     FIXED_POINT_GAMMA = 32 * np.pi**2 / 3
     FIXED_POINT_MU = 16 * np.pi**2
     
+    # Theoretical Reference: IRH v21.4
     def __init__(self, verbose: bool = True):
         """Initialize cross-validation."""
         self.verbose = verbose
@@ -709,6 +712,7 @@ class ErrorPropagation:
         copilot21promtMAX.md Phase III: Output contextualization
     """
     
+    # Theoretical Reference: IRH v21.4
     def __init__(self, verbose: bool = True):
         """Initialize error propagation framework."""
         self.verbose = verbose

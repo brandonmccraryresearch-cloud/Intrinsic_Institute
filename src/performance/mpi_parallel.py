@@ -389,6 +389,7 @@ class MPIContext:
             return self.comm.allreduce(data, op=op)
         return data
     
+    # Theoretical Reference: IRH v21.4 (Parallel Computing Infrastructure)
     def get_theoretical_reference(self) -> str:
         """Return theoretical foundation reference."""
         return "IRH v21.1 Manuscript §1.6, docs/ROADMAP.md §3.4"

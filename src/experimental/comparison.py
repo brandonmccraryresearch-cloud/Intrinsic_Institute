@@ -275,6 +275,7 @@ class MultiComparisonResult:
     p_value: float
     reduced_chi_squared: float
     
+    # Theoretical Reference: IRH v21.4
     def is_consistent(self, significance: float = 0.05) -> bool:
         """Check if model is consistent at given significance level."""
         return self.p_value > significance

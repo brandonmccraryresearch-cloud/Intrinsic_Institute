@@ -434,6 +434,7 @@ class IRHOutputWriter:
         All outputs must follow standardized format for reproducibility.
     """
     
+    # Theoretical Reference: IRH v21.4
     def __init__(
         self,
         computation_type: Union[ComputationType, str],
@@ -468,6 +469,7 @@ class IRHOutputWriter:
         """Set lattice discretization parameters."""
         self.provenance.lattice_parameters.update(params)
     
+    # Theoretical Reference: IRH v21.4
     def set_rg_parameters(self, **params):
         """Set RG flow parameters."""
         self.provenance.rg_parameters.update(params)
@@ -550,6 +552,7 @@ class IRHOutputWriter:
         """Convert to JSON string."""
         return json.dumps(self.to_dict(), indent=indent, default=str)
     
+    # Theoretical Reference: IRH v21.4
     def write(self, path: Optional[str] = None):
         
         # Theoretical Reference: IRH v21.4 (Output Framework)

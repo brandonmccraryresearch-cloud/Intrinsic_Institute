@@ -125,6 +125,7 @@ class MetricTensor:
         """Raise index: v^μ = g^μν v_ν."""
         return self.inverse @ v
     
+    # Theoretical Reference: IRH v21.4 Part 1, §2.2
     def lower_index(self, v: np.ndarray) -> np.ndarray:
         """Lower index: v_μ = g_μν v^ν."""
         return self.components @ v
@@ -145,6 +146,7 @@ class MetricTensor:
         """Compute norm squared g_μν v^μ v^ν."""
         return self.inner_product(v, v)
     
+    # Theoretical Reference: IRH v21.4 Part 1, §2.2
     def is_timelike(self, v: np.ndarray) -> bool:
         """Check if vector is timelike (g_μν v^μ v^ν < 0)."""
         return self.norm_squared(v) < 0

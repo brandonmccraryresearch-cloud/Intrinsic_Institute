@@ -147,6 +147,7 @@ class IRHLogger:
             cls._instance = cls()
         return cls._instance
     
+    # Theoretical Reference: IRH v21.4
     def log(
         self,
         level: IRHLogLevel,
@@ -364,6 +365,7 @@ class IRHLogger:
         """Get log history for analysis."""
         return self._log_history.copy()
     
+    # Theoretical Reference: IRH v21.4
     def clear_history(self):
         """Clear log history."""
         self._log_history.clear()
@@ -441,6 +443,7 @@ def get_logger() -> IRHLogger:
     return IRHLogger.get_instance()
 
 
+# Theoretical Reference: IRH v21.4
 def configure_logging(
     level: int = logging.INFO,
     stream: Any = sys.stdout,

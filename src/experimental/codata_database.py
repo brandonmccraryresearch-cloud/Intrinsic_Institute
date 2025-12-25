@@ -527,6 +527,7 @@ def list_constants() -> List[str]:
     return sorted(set(CODATA_DATABASE.keys()))
 
 
+# Theoretical Reference: IRH v21.4
 def get_all_constants() -> Dict[str, ExperimentalValue]:
     """Return dictionary of all constants."""
     return dict(CODATA_DATABASE)

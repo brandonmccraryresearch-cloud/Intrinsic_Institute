@@ -184,6 +184,7 @@ class QuaternionicField:
         """Compute |φ| at each lattice point."""
         return np.sqrt(self.norm_squared())
     
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def total_norm_squared(self) -> float:
         """Compute ∫|φ|² (sum over all lattice points)."""
         return float(np.sum(self.norm_squared()))
@@ -252,6 +253,7 @@ class QuaternionicField:
         """Right scalar multiplication."""
         return self.__mul__(scalar)
     
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def __neg__(self) -> QuaternionicField:
         """Field negation."""
         return QuaternionicField(data=-self.data, lattice_size=self.lattice_size)

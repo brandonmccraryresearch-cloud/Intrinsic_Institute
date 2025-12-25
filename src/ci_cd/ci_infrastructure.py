@@ -559,6 +559,7 @@ class RegressionDetector:
         },
     }
     
+    # Theoretical Reference: IRH v21.4
     def __init__(self, baselines_file: Optional[Path] = None):
         """
         Initialize regression detector.
@@ -673,6 +674,7 @@ class RegressionDetector:
         """Check if any regressions were detected."""
         return any(r.is_regression for r in self.reports)
     
+    # Theoretical Reference: IRH v21.4
     def generate_report(self) -> str:
         """Generate human-readable regression report."""
         lines = [
@@ -742,6 +744,7 @@ class TestTierRunner:
         TestTier.T4_FALSIFICATION: 21600,
     }
     
+    # Theoretical Reference: IRH v21.4
     def __init__(self, repo_root: Optional[Path] = None):
         """
         Initialize test runner.
@@ -855,6 +858,7 @@ class TestTierRunner:
         
         return results
     
+    # Theoretical Reference: IRH v21.4
     def generate_report(self) -> str:
         """Generate test execution report."""
         lines = [
@@ -896,6 +900,7 @@ class BaselineManager:
         copilot21promtMAX.md Phase VII: Baseline Management
     """
     
+    # Theoretical Reference: IRH v21.4
     def __init__(self, baselines_file: Optional[Path] = None):
         """
         Initialize baseline manager.
@@ -978,6 +983,7 @@ class BaselineManager:
         """Get baseline by name."""
         return self.baselines.get(name)
     
+    # Theoretical Reference: IRH v21.4
     def list_baselines(self) -> List[str]:
         
         # Theoretical Reference: IRH v21.4 (CI/CD Infrastructure)
@@ -1000,6 +1006,7 @@ class CoverageReporter:
         copilot21promtMAX.md Phase VII: Coverage Reporting
     """
     
+    # Theoretical Reference: IRH v21.4
     def __init__(self, repo_root: Optional[Path] = None):
         """
         Initialize coverage reporter.

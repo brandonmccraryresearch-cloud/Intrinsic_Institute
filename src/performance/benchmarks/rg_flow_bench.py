@@ -298,6 +298,7 @@ class RGFlowBenchmarkSuite:
             ),
         }
     
+    # Theoretical Reference: IRH v21.4 (Performance Infrastructure)
     def print_report(self, results: Dict[str, Dict[str, BenchmarkResult]]) -> None:
         """Print formatted benchmark report."""
         print("=" * 70)
@@ -315,6 +316,7 @@ class RGFlowBenchmarkSuite:
                 if 'throughput_per_item' in result.metadata:
                     print(f"    Items/s: {result.metadata['throughput_per_item']:.1f}")
     
+    # Theoretical Reference: IRH v21.4 (Performance Infrastructure)
     def get_summary(
         self,
         results: Dict[str, Dict[str, BenchmarkResult]]

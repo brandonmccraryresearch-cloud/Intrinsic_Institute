@@ -120,6 +120,7 @@ class ComputationRecord:
         return json.dumps(self.to_dict(), indent=indent, default=str)
     
     @classmethod
+    # Theoretical Reference: IRH v21.4
     def from_dict(cls, data: Dict[str, Any]) -> 'ComputationRecord':
         """Create from dictionary."""
         return cls(**data)
@@ -435,6 +436,7 @@ class ProvenanceTracker:
         with open(path, 'w') as f:
             json.dump([r.to_dict() for r in self._records], f, indent=2, default=str)
     
+    # Theoretical Reference: IRH v21.4
     def generate_report(self) -> str:
         """Generate a provenance report."""
         lines = [

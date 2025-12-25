@@ -304,6 +304,7 @@ class SparseFieldArray:
     >>> dense = sparse.to_dense()
     """
     
+    # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
     def __init__(
         self,
         shape: Tuple[int, ...],
@@ -391,6 +392,7 @@ class SparseFieldArray:
         
         return sparse
     
+    # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
     def clear(self) -> None:
         """Clear all data."""
         self._data.clear()
@@ -433,6 +435,7 @@ class MemoryMonitor:
     >>> monitor.stop()
     """
     
+    # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
     def __init__(self, track_gc: bool = True):
         self.track_gc = track_gc
         self._stats = MemoryStats()
@@ -495,6 +498,7 @@ class MemoryMonitor:
         """Get current memory statistics."""
         return self._stats
     
+    # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
     def get_snapshots(self) -> List[Dict[str, Any]]:
         """Get all snapshots."""
         return list(self._snapshots)
@@ -506,6 +510,7 @@ class MemoryMonitor:
         """Clear snapshot history."""
         self._snapshots.clear()
     
+    # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
     def get_report(self) -> Dict[str, Any]:
         """Generate memory report."""
         return {
@@ -540,6 +545,7 @@ class MemoryOptimizer:
     ...     result = compute_rg_flow(...)
     """
     
+    # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
     def __init__(
         self,
         enable_pooling: bool = True,
@@ -578,6 +584,7 @@ class MemoryOptimizer:
         if self._pool is not None:
             self._pool.release(arr)
     
+    # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
     def start_monitoring(self) -> None:
         """Start memory monitoring."""
         self._monitor.start()
@@ -589,6 +596,7 @@ class MemoryOptimizer:
         """Stop memory monitoring."""
         self._monitor.stop()
     
+    # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
     def optimize_gc(self) -> None:
         """Apply GC optimizations."""
         if self.enable_gc_optimization:
@@ -624,6 +632,7 @@ class MemoryOptimizer:
         self.stop_monitoring()
         self.restore_gc()
     
+    # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
     def get_stats(self) -> Dict[str, Any]:
         """Get combined statistics."""
         stats = {
@@ -664,6 +673,7 @@ def memory_efficient(
         import functools
         
         @functools.wraps(func)
+        # Theoretical Reference: IRH v21.4 (Memory/Cache Management Infrastructure)
         def wrapper(*args, **kwargs):
             optimizer = MemoryOptimizer(
                 enable_gc_optimization=gc_optimize

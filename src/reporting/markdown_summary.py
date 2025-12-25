@@ -42,6 +42,7 @@ class MarkdownGenerator:
     title: str = "IRH v21.0 Computation Summary"
     sections: List[str] = field(default_factory=list)
     
+    # Theoretical Reference: IRH v21.4
     def add_header(self, text: str, level: int = 2) -> None:
         """Add a header."""
         self.sections.append(f"{'#' * level} {text}\n")

@@ -387,6 +387,7 @@ class CodeTheoryXRef:
             "coverage": self.compute_coverage().to_dict(),
         }
     
+    # Theoretical Reference: IRH v21.4
     def to_json(self, indent: int = 2) -> str:
         """Export cross-reference data as JSON."""
         return json.dumps(self.to_dict(), indent=indent)

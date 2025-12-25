@@ -521,6 +521,7 @@ def find_all_critical_points(
     # Step 1: Global search for approximate critical points
     engine.step("Step 1: Global search via differential evolution")
     
+    # Theoretical Reference: IRH v21.4 Part 2, Appendix E.1
     def objective(K_f_array):
         
         # Theoretical Reference: IRH v21.4

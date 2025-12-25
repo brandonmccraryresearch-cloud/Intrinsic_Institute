@@ -107,6 +107,7 @@ class Quaternion:
         return cls(w=1.0, x=0.0, y=0.0, z=0.0)
     
     @classmethod
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1.1
     def zero(cls) -> Quaternion:
         """Return additive identity: 0 + 0i + 0j + 0k."""
         return cls(w=0.0, x=0.0, y=0.0, z=0.0)
@@ -180,6 +181,7 @@ class Quaternion:
         """Compute norm |q| = √(qq̄)."""
         return math.sqrt(self.norm_squared())
     
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1.1
     def normalize(self) -> Quaternion:
         """Return unit quaternion q/|q| on S³."""
         n = self.norm()
@@ -227,6 +229,7 @@ class Quaternion:
         """Right addition with scalar."""
         return self.__add__(other)
     
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1.1
     def __sub__(self, other: Union[Quaternion, float]) -> Quaternion:
         """Quaternion subtraction."""
         if isinstance(other, (int, float)):
@@ -290,6 +293,7 @@ class Quaternion:
         """Right multiplication with scalar."""
         return self.__mul__(other)
     
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1.1
     def __truediv__(self, other: Union[Quaternion, float]) -> Quaternion:
         
         # Theoretical Reference: IRH v21.4 Part 1, §1.1.1

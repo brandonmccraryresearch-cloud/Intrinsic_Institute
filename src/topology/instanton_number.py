@@ -85,6 +85,7 @@ class TopologicalCharge:
     complexity: float
     is_stable: bool
     
+    # Theoretical Reference: IRH v21.4 Part 2, Appendix D.2
     def pontryagin_index(self) -> int:
         """Return the Pontryagin index (topological charge)."""
         return self.charge

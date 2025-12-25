@@ -543,6 +543,7 @@ class VectorizedOperations:
         M = np.asarray(matrices, dtype=self._dtype)
         return optimized_matrix_operations(M, operation)
     
+    # Theoretical Reference: IRH v21.4 (Performance Infrastructure)
     def get_theoretical_reference(self) -> str:
         
         # Theoretical Reference: IRH v21.4

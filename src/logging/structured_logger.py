@@ -89,6 +89,7 @@ class LogEntry:
         """Convert to JSON string."""
         return json.dumps(self.to_dict(), indent=indent, default=str)
     
+    # Theoretical Reference: IRH v21.4
     def to_text(self) -> str:
         """Convert to human-readable text format."""
         parts = [f"[{self.timestamp}] [{self.level}]"]
@@ -247,6 +248,7 @@ class StructuredLogger:
         """Log debug message."""
         self.log(LogLevel.DEBUG, message, **kwargs)
     
+    # Theoretical Reference: IRH v21.4
     def info(self, message: str, **kwargs) -> None:
         """Log info message."""
         self.log(LogLevel.INFO, message, **kwargs)
@@ -427,6 +429,7 @@ class StructuredLogger:
         """Clear all log entries."""
         self._entries.clear()
     
+    # Theoretical Reference: IRH v21.4
     def export_json(self, path: str) -> None:
         """Export all entries to JSON file."""
         with open(path, 'w') as f:

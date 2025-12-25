@@ -325,6 +325,7 @@ class U1Phase:
         self.phase = float(self.phase) % (2 * math.pi)
     
     @classmethod
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def identity(cls) -> U1Phase:
         """Return identity element φ = 0."""
         return cls(phase=0.0)
@@ -337,6 +338,7 @@ class U1Phase:
         return cls(phase=np.angle(z))
     
     @classmethod
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def random(cls, rng: np.random.Generator = None) -> U1Phase:
         """Generate uniformly random U(1) element."""
         if rng is None:
@@ -350,10 +352,12 @@ class U1Phase:
         """Convert to unit complex number e^{iφ}."""
         return complex(np.exp(1j * self.phase))
     
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def inverse(self) -> U1Phase:
         """Compute group inverse: (e^{iφ})⁻¹ = e^{-iφ}."""
         return U1Phase(phase=-self.phase)
     
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def __mul__(self, other: U1Phase) -> U1Phase:
         """Group multiplication: e^{iφ₁} · e^{iφ₂} = e^{i(φ₁+φ₂)}."""
         if not isinstance(other, U1Phase):
@@ -433,11 +437,13 @@ class GInfElement:
     u1: U1Phase
     
     @classmethod
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def identity(cls) -> GInfElement:
         """Return identity element (e, 0)."""
         return cls(su2=SU2Element.identity(), u1=U1Phase.identity())
     
     @classmethod
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def from_components(
         cls,
         w: float, x: float, y: float, z: float,
@@ -449,16 +455,19 @@ class GInfElement:
         return cls(su2=su2, u1=u1)
     
     @classmethod
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def random(cls, rng: np.random.Generator = None) -> GInfElement:
         """Generate uniformly random G_inf element (product Haar measure)."""
         if rng is None:
             rng = np.random.default_rng()
         return cls(su2=SU2Element.random(rng), u1=U1Phase.random(rng))
     
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def inverse(self) -> GInfElement:
         """Compute group inverse: (u, φ)⁻¹ = (u⁻¹, -φ)."""
         return GInfElement(su2=self.su2.inverse(), u1=self.u1.inverse())
     
+    # Theoretical Reference: IRH v21.4 Part 1, §1.1
     def __mul__(self, other: GInfElement) -> GInfElement:
         """Group multiplication: (u₁,φ₁)·(u₂,φ₂) = (u₁u₂, φ₁+φ₂)."""
         if not isinstance(other, GInfElement):

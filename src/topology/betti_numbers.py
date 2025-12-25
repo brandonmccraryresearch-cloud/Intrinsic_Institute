@@ -87,6 +87,7 @@ class GaugeGroupDecomposition:
     u1_dim: int = U1_GENERATORS    # dim(U(1)) = 1
     total: int = TOTAL_GENERATORS  # 12
     
+    # Theoretical Reference: IRH v21.4 Part 2, Appendix D.1
     def verify(self) -> bool:
         """Verify the decomposition sums to 12."""
         return self.su3_dim + self.su2_dim + self.u1_dim == self.total == BETTI_1

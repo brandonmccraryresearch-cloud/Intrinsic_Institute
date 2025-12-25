@@ -135,6 +135,7 @@ def compress_zlib(data: bytes) -> bytes:
     return zlib.compress(data, level=9)
 
 
+# Theoretical Reference: IRH v21.4 Part 1, Appendix A
 def compressed_length(data: bytes) -> int:
     """Return length of compressed data."""
     return len(compress_zlib(data))

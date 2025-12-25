@@ -342,6 +342,7 @@ class HTMLGenerator:
     title: str = "IRH v21.0 Computation Report"
     sections: List[HTMLSection] = field(default_factory=list)
     
+    # Theoretical Reference: IRH v21.4
     def add_section(
         self,
         id: str,

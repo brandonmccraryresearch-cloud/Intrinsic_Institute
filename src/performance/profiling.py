@@ -455,6 +455,7 @@ class Profiler:
             if self._call_profiler is not None:
                 self._call_profiler = cProfile.Profile()
     
+    # Theoretical Reference: IRH v21.4 (Performance Infrastructure)
     def get_stats(self) -> Dict[str, Any]:
         """Get summary statistics."""
         return self.generate_report().get_summary()

@@ -604,6 +604,7 @@ def list_particles() -> List[str]:
     return sorted(set(p.name for p in PDG_DATABASE.values()))
 
 
+# Theoretical Reference: IRH v21.4
 def get_particles_by_type(particle_type: ParticleType) -> List[Particle]:
     """Get all particles of a given type."""
     seen = set()

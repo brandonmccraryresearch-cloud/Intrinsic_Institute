@@ -343,6 +343,7 @@ class ActionBenchmarkSuite:
             ),
         }
     
+    # Theoretical Reference: IRH v21.4 (Performance Infrastructure)
     def print_report(self, results: Dict[str, Dict[str, BenchmarkResult]]) -> None:
         """Print formatted benchmark report."""
         print("=" * 70)
@@ -360,6 +361,7 @@ class ActionBenchmarkSuite:
                 if 'points_per_ms' in result.metadata:
                     print(f"    Points/ms: {result.metadata['points_per_ms']:.1f}")
     
+    # Theoretical Reference: IRH v21.4 (Performance Infrastructure)
     def get_summary(
         self,
         results: Dict[str, Dict[str, BenchmarkResult]]

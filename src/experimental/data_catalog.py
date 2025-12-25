@@ -300,6 +300,7 @@ class DataCatalog:
         """Get list of all categories."""
         return sorted(set(e.category for e in self.entries.values()))
     
+    # Theoretical Reference: IRH v21.4
     def list_keys(self, category: str = None) -> List[str]:
         """Get list of all keys, optionally filtered by category."""
         if category:
@@ -369,6 +370,7 @@ class DataCatalog:
         }
     
     @classmethod
+    # Theoretical Reference: IRH v21.4
     def from_dict(cls, data: Dict[str, Any]) -> 'DataCatalog':
         """Create catalog from dictionary."""
         catalog = cls.__new__(cls)
@@ -487,6 +489,7 @@ def search_catalog(query: str = "", **kwargs) -> List[DataEntry]:
     return get_catalog().search(query, **kwargs)
 
 
+# Theoretical Reference: IRH v21.4
 def compare_with_irh(
     irh_predictions: Dict[str, float],
     uncertainties: Dict[str, float] = None,

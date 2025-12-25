@@ -283,6 +283,7 @@ class QNCDBenchmarkSuite:
             ),
         }
     
+    # Theoretical Reference: IRH v21.4 (Performance Infrastructure)
     def print_report(self, results: Dict[str, Dict[str, BenchmarkResult]]) -> None:
         """Print formatted benchmark report."""
         print("=" * 70)
@@ -300,6 +301,7 @@ class QNCDBenchmarkSuite:
                 if 'throughput_per_pair' in result.metadata:
                     print(f"    Pairs/s: {result.metadata['throughput_per_pair']:.1f}")
     
+    # Theoretical Reference: IRH v21.4 (Performance Infrastructure)
     def get_summary(
         self,
         results: Dict[str, Dict[str, BenchmarkResult]]

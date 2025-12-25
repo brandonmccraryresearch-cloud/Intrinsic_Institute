@@ -89,6 +89,7 @@ class RunningCouplings:
         """Return couplings as tuple."""
         return (self.lambda_k, self.gamma_k, self.mu_k)
     
+    # Theoretical Reference: IRH v21.4
     def t(self) -> float:
         """Return RG time t = ln(k/k_0)."""
         return math.log(self.k / K_0)
@@ -107,6 +108,7 @@ class RunningCouplings:
         ])
         return np.linalg.norm(delta)
     
+    # Theoretical Reference: IRH v21.4
     def is_near_fixed_point(self, tolerance: float = 1.0) -> bool:
         """Check if couplings are near the fixed point."""
         return self.distance_to_fixed_point() < tolerance
