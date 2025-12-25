@@ -228,10 +228,11 @@ class TestFermionMassWithRG:
         # Larger K_f should give larger mass
         assert result_large['mass_GeV'] > result_small['mass_GeV']
         
-        # Should scale roughly as sqrt(K_f) but allow wide range for RG corrections
+        # Corrected: Mass scales linearly with K_f (Eq. 3.6 in IRH v21.4)
+        # m_mu / m_e approx K_mu / K_e approx 206
         ratio = result_large['mass_GeV'] / result_small['mass_GeV']
-        # Just check it's in a reasonable range
-        assert 10 < ratio < 20  # Muon is ~200x heavier than electron
+        # Check it's in a reasonable range around 206
+        assert 150 < ratio < 250  # Muon is ~206x heavier than electron
     
     def test_theoretical_reference(self):
         """Test that theoretical reference is correct."""
