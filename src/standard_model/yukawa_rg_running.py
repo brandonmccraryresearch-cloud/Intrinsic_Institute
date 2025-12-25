@@ -403,16 +403,20 @@ def compute_fermion_mass_with_rg(
         engine.step("Step 2: Computing mass components")
         engine.value("prefactor", prefactor)
         engine.value("yukawa_coupling", yukawa_coupling)
-        engine.value("higgs_vev_term", higgs_vev_term)
+        engine.value("higgs_vev_term (theoretical)", higgs_vev_term)
+        engine.info(f"Note: Using empirical higgs_vev = {higgs_vev} GeV as scale factor")
     
     # Step 3: Apply complete formula
-    # m_f = R_Y × √2 × K_f × √λ̃* × √(μ̃*/λ̃*) × ℓ_0^(-1)
-    # Note: All terms are dimensionless except ℓ_0^(-1) which has units of GeV
+    # Theoretical formula: m_f = R_Y × √2 × K_f × √λ̃* × √(μ̃*/λ̃*) × ℓ_0^(-1)
+    # Simplifies to: m_f = R_Y × √2 × K_f × √μ̃* × ℓ_0^(-1)
+    # 
+    # Implementation note: Uses empirical higgs_vev (246.22 GeV) as scale factor
+    # rather than theoretical ℓ_0^(-1) (Planck scale), with dimensionful correction factors.
+    # This is a phenomenological placeholder pending full dimensional analysis.
     
-    # Complete Eq. 3.6 with all theoretical terms including √(μ̃*/λ̃*)
+    # Complete Eq. 3.6 with all theoretical terms including √μ̃*
     # CORRECTED to be linear in K_f per manuscript
-    # Note: Currently uses empirical higgs_vev as scale factor (placeholder for full dimensional analysis)
-    mass_gev = R_Y * prefactor * K_f * math.sqrt(lambda_star) * math.sqrt(mu_star / lambda_star) * higgs_vev / 1e3
+    mass_gev = R_Y * prefactor * K_f * math.sqrt(mu_star) * higgs_vev / 1e3
     
     if engine:
         engine.step("Step 3: Apply complete Eq. 3.6")
